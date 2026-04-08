@@ -23,17 +23,17 @@ public class GeminiService {
     @Value("${GEMINI_API_KEY:#{null}}")
     private String apiKey;
 
-    private final RestTemplate restTemplate;
+    private RestTemplate restTemplate;
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
-    public GeminiService() {
-        // Set explicit timeouts so Gemini calls don't hang indefinitely
+    @jakarta.annotation.PostConstruct
+    public void init() {
         org.springframework.http.client.SimpleClientHttpRequestFactory factory =
             new org.springframework.http.client.SimpleClientHttpRequestFactory();
-        factory.setConnectTimeout(10000); // 10 seconds
-        factory.setReadTimeout(30000);    // 30 seconds
+        factory.setConnectTimeout(10000);
+        factory.setReadTimeout(30000);
         this.restTemplate = new RestTemplate(factory);
     }
-    private final ObjectMapper objectMapper = new ObjectMapper();
 
     /**
      * Calls Gemini API to get structured disease information in Spanish.
