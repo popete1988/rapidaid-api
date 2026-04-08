@@ -30,7 +30,7 @@ public class GeminiService {
         org.springframework.http.client.SimpleClientHttpRequestFactory factory =
             new org.springframework.http.client.SimpleClientHttpRequestFactory();
         factory.setConnectTimeout(10000); // 10 seconds
-        factory.setReadTimeout(15000);    // 15 seconds
+        factory.setReadTimeout(30000);    // 30 seconds
         this.restTemplate = new RestTemplate(factory);
     }
     private final ObjectMapper objectMapper = new ObjectMapper();
@@ -128,6 +128,8 @@ public class GeminiService {
             // Strategy: find first { and last } in the entire text
             int start = text.indexOf("{");
             int end   = text.lastIndexOf("}") + 1;
+            log.info("DEBUG start=" + start + " | end=" + end + " | text.length=" + text.length() + 
+                     " | last20chars=" + text.substring(Math.max(0, text.length()-20)));
             if (start < 0 || end <= start) {
                 log.warning("No JSON object found in Gemini response: " + text.substring(0, Math.min(text.length(), 100)));
                 return null;
