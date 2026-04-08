@@ -48,19 +48,10 @@ public class GeminiService {
             (apiKey.length() > 8 ? apiKey.substring(0, 8) + "..." : "TOO_SHORT"));
 
         String prompt = """
-            Eres un asistente médico informativo. Proporciona información sobre la enfermedad o condición médica siguiente en español de España.
-            
             Enfermedad: %s
-            
-            Responde ÚNICAMENTE en este formato JSON exacto, sin texto adicional:
-            {
-              "name": "nombre de la enfermedad en español",
-              "description": "descripción clara de qué es la enfermedad en 2-3 frases",
-              "symptoms": "lista de síntomas principales separados por comas",
-              "treatment": "descripción del tratamiento principal en 2-3 frases"
-            }
-            
-            Si no es una enfermedad o condición médica real, responde: {"error": "no_disease"}
+            Responde SOLO con este JSON, sin markdown, sin explicaciones:
+            {"name":"nombre","description":"que es en 1 frase","symptoms":"sintoma1, sintoma2, sintoma3","treatment":"tratamiento en 1 frase"}
+            Si no es enfermedad real: {"error":"no_disease"}
             """.formatted(query);
 
         try {
@@ -73,7 +64,7 @@ public class GeminiService {
                 ),
                 "generationConfig", Map.of(
                     "temperature", 0.2,
-                    "maxOutputTokens", 500
+                    "maxOutputTokens", 300
                 )
             );
 
