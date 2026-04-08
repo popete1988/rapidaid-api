@@ -1,0 +1,1116 @@
+[
+  {
+    "name": "Meningitis",
+    "aliases": [
+      "meningitis bacteriana",
+      "meningitis viral"
+    ],
+    "description": "La meningitis es la inflamación de las meninges, las membranas que rodean el cerebro y la médula espinal. Puede ser causada por bacterias, virus u otros microorganismos. La forma bacteriana es la más grave y puede ser mortal si no se trata a tiempo.",
+    "symptoms": "Fiebre alta y repentina, dolor de cabeza intenso, rigidez en el cuello, náuseas y vómitos, sensibilidad a la luz y al sonido, confusión o dificultad para concentrarse, convulsiones, erupción cutánea (en meningitis meningocócica).",
+    "treatment": "La meningitis bacteriana requiere hospitalización urgente y tratamiento con antibióticos intravenosos. La meningitis viral generalmente se trata con reposo, hidratación y analgésicos. Existe vacuna preventiva para algunos tipos de meningitis bacteriana."
+  },
+  {
+    "name": "Diabetes",
+    "aliases": [
+      "diabetes mellitus",
+      "diabetes tipo 1",
+      "diabetes tipo 2",
+      "azúcar"
+    ],
+    "description": "La diabetes es una enfermedad crónica en la que el organismo no produce suficiente insulina o no la utiliza correctamente, lo que provoca niveles elevados de glucosa en sangre. Existen dos tipos principales: tipo 1 (autoinmune) y tipo 2 (relacionada con el estilo de vida).",
+    "symptoms": "Sed excesiva, necesidad frecuente de orinar, hambre constante, pérdida de peso inexplicable, visión borrosa, fatiga, heridas que tardan en cicatrizar, hormigueo o entumecimiento en manos y pies.",
+    "treatment": "La diabetes tipo 1 requiere insulina diaria. La tipo 2 se controla con dieta saludable, ejercicio regular, medicación oral (metformina) y en algunos casos insulina. El control periódico de la glucosa en sangre es fundamental en ambos casos."
+  },
+  {
+    "name": "Gripe",
+    "aliases": [
+      "influenza",
+      "gripa",
+      "flu"
+    ],
+    "description": "La gripe es una infección respiratoria viral causada por el virus influenza. Se propaga fácilmente por el aire y por contacto con superficies contaminadas. Aunque generalmente se resuelve en una semana, puede ser grave en personas mayores, niños pequeños o personas con enfermedades previas.",
+    "symptoms": "Fiebre alta de aparición súbita, escalofríos, dolor muscular intenso, dolor de cabeza, tos seca, dolor de garganta, congestión nasal, fatiga y malestar general.",
+    "treatment": "Reposo en cama, hidratación abundante, analgésicos y antipiréticos como paracetamol o ibuprofeno. En casos graves o personas de riesgo se pueden usar antivirales como oseltamivir. La vacunación anual es la mejor prevención."
+  },
+  {
+    "name": "Hipertensión",
+    "aliases": [
+      "presión alta",
+      "tensión alta",
+      "hipertensión arterial"
+    ],
+    "description": "La hipertensión arterial es una enfermedad crónica caracterizada por la elevación persistente de la presión sanguínea en las arterias. Se considera hipertensión cuando la presión es igual o superior a 140/90 mmHg. Es un factor de riesgo importante para enfermedades cardíacas y accidentes cerebrovasculares.",
+    "symptoms": "Generalmente no produce síntomas, por eso se la llama el 'asesino silencioso'. En casos severos puede causar dolor de cabeza, visión borrosa, mareos, sangrado nasal, dificultad para respirar y dolor en el pecho.",
+    "treatment": "Cambios en el estilo de vida: dieta baja en sal, ejercicio regular, control del peso, reducir el alcohol y dejar de fumar. Si no es suficiente, se usan medicamentos antihipertensivos como IECA, ARA-II, beta bloqueantes o diuréticos."
+  },
+  {
+    "name": "Asma",
+    "aliases": [
+      "asma bronquial"
+    ],
+    "description": "El asma es una enfermedad inflamatoria crónica de las vías respiratorias que provoca episodios recurrentes de dificultad para respirar. Las vías se estrechan e inflaman en respuesta a determinados desencadenantes como el polvo, el polen, el ejercicio o el frío.",
+    "symptoms": "Dificultad para respirar, pitidos o sibilancias al respirar, tos persistente especialmente por la noche, sensación de opresión en el pecho, los síntomas empeoran con el ejercicio o la exposición a alérgenos.",
+    "treatment": "Broncodilatadores de acción rápida (salbutamol) para las crisis agudas. Corticoides inhalados para el control a largo plazo. Evitar los desencadenantes conocidos. En casos graves se pueden usar biológicos. El plan de acción individualizado con el médico es fundamental."
+  },
+  {
+    "name": "Neumonía",
+    "aliases": [
+      "neumonia",
+      "pulmonía"
+    ],
+    "description": "La neumonía es una infección que inflama los sacos aéreos de uno o ambos pulmones, que pueden llenarse de líquido o pus. Puede ser causada por bacterias, virus u hongos. Es más grave en ancianos, bebés y personas con el sistema inmune debilitado.",
+    "symptoms": "Tos con flema o pus, fiebre, escalofríos, dificultad para respirar, dolor en el pecho al respirar o toser, fatiga, náuseas, vómitos o diarrea. En ancianos puede manifestarse como confusión.",
+    "treatment": "La neumonía bacteriana se trata con antibióticos. La viral con antivirales y tratamiento sintomático. Reposo, hidratación abundante y analgésicos. Los casos graves requieren hospitalización y oxigenoterapia."
+  },
+  {
+    "name": "Infarto de miocardio",
+    "aliases": [
+      "infarto",
+      "ataque al corazón",
+      "infarto cardíaco"
+    ],
+    "description": "El infarto de miocardio ocurre cuando el flujo de sangre hacia una parte del corazón queda bloqueado, generalmente por un coágulo en una arteria coronaria. Si no se trata rápidamente, el tejido cardíaco comienza a morir. Es una emergencia médica grave.",
+    "symptoms": "Dolor o presión intensa en el pecho que puede irradiar al brazo izquierdo, cuello o mandíbula, dificultad para respirar, sudoración fría, náuseas, mareos, sensación de muerte inminente. En mujeres puede manifestarse de forma atípica con fatiga extrema.",
+    "treatment": "Emergencia médica: llamar al 112 inmediatamente. El tratamiento incluye aspirina, nitratos, anticoagulantes y desobstrucción de la arteria mediante cateterismo (angioplastia) o cirugía de bypass. La rapidez en el tratamiento es crucial."
+  },
+  {
+    "name": "Ictus",
+    "aliases": [
+      "derrame cerebral",
+      "accidente cerebrovascular",
+      "ACV",
+      "stroke"
+    ],
+    "description": "El ictus ocurre cuando el suministro de sangre al cerebro se interrumpe (ictus isquémico) o cuando un vaso sanguíneo se rompe (ictus hemorrágico). Cada minuto sin tratamiento provoca la muerte de millones de neuronas. Es la primera causa de discapacidad en adultos.",
+    "symptoms": "Debilidad o parálisis repentina en cara, brazo o pierna (generalmente en un lado del cuerpo), dificultad repentina para hablar o entender, visión borrosa en uno o ambos ojos, dolor de cabeza súbito e intenso, pérdida de equilibrio o coordinación.",
+    "treatment": "Emergencia médica: llamar al 112 inmediatamente. Recordar la regla FAST (Face-Arms-Speech-Time). El ictus isquémico puede tratarse con trombólisis si se actúa en las primeras horas. El hemorrágico puede requerir cirugía. La rehabilitación posterior es fundamental."
+  },
+  {
+    "name": "Apendicitis",
+    "aliases": [
+      "inflamación del apéndice"
+    ],
+    "description": "La apendicitis es la inflamación del apéndice, una pequeña extensión del intestino grueso. Si no se trata, el apéndice puede perforarse y causar una infección grave en el abdomen (peritonitis). Es la urgencia quirúrgica abdominal más frecuente.",
+    "symptoms": "Dolor abdominal que comienza alrededor del ombligo y se desplaza a la parte inferior derecha del abdomen, náuseas, vómitos, fiebre, pérdida de apetito, el dolor empeora al moverse, toser o respirar profundamente.",
+    "treatment": "El tratamiento estándar es la extirpación quirúrgica del apéndice (apendicectomía), que puede realizarse por laparoscopia. En algunos casos leves se pueden usar antibióticos inicialmente. La intervención rápida es fundamental para evitar la perforación."
+  },
+  {
+    "name": "Gastroenteritis",
+    "aliases": [
+      "gastroenteritis viral",
+      "gastroenteritis bacteriana",
+      "gripe intestinal"
+    ],
+    "description": "La gastroenteritis es la inflamación del estómago e intestinos causada generalmente por virus (norovirus, rotavirus) o bacterias. Se contagia fácilmente por alimentos o agua contaminados y por contacto directo con personas infectadas.",
+    "symptoms": "Diarrea acuosa, náuseas y vómitos, dolor y calambres abdominales, fiebre leve, escalofríos, dolor de cabeza, dolor muscular. Los síntomas suelen aparecer entre 1 y 3 días después de la exposición.",
+    "treatment": "Hidratación abundante con agua y sales de rehidratación oral para reponer los líquidos perdidos. Dieta blanda (arroz, pollo, tostadas). Evitar lácteos, alimentos grasos y picantes. Los antibióticos solo se usan en casos bacterianos graves. Generalmente se resuelve en 1-3 días."
+  },
+  {
+    "name": "Bronquitis",
+    "aliases": [
+      "bronquitis aguda",
+      "bronquitis crónica"
+    ],
+    "description": "La bronquitis es la inflamación de los bronquios, los conductos que llevan el aire a los pulmones. La bronquitis aguda suele estar causada por virus y dura pocas semanas. La bronquitis crónica es una enfermedad persistente generalmente asociada al tabaquismo.",
+    "symptoms": "Tos persistente con producción de mucosidad (puede ser amarilla o verde), silbidos al respirar, dificultad para respirar, opresión en el pecho, fatiga, fiebre leve y escalofríos en la forma aguda.",
+    "treatment": "La bronquitis aguda se trata con reposo, hidratación y analgésicos. Los antibióticos no son útiles en los casos virales. Se pueden usar broncodilatadores para aliviar los síntomas. Dejar de fumar es fundamental en la bronquitis crónica."
+  },
+  {
+    "name": "Sinusitis",
+    "aliases": [
+      "sinusitis aguda",
+      "sinusitis crónica"
+    ],
+    "description": "La sinusitis es la inflamación de los senos paranasales, las cavidades huecas alrededor de la nariz. Puede ser aguda (menos de 4 semanas) o crónica (más de 12 semanas). Generalmente es causada por virus, aunque también puede ser bacteriana o alérgica.",
+    "symptoms": "Dolor o presión facial (especialmente alrededor de los ojos, mejillas y frente), congestión nasal, secreción nasal espesa amarilla o verde, pérdida del olfato, dolor de cabeza, presión en los oídos, tos, fatiga y fiebre.",
+    "treatment": "Descongestionantes nasales, irrigación nasal con suero salino, analgésicos para el dolor. Los antibióticos solo se recomiendan si los síntomas son severos o duran más de 10 días. En casos crónicos puede ser necesaria la cirugía."
+  },
+  {
+    "name": "Faringitis",
+    "aliases": [
+      "dolor de garganta",
+      "anginas",
+      "amigdalitis"
+    ],
+    "description": "La faringitis es la inflamación de la faringe (garganta) generalmente causada por virus o bacterias como el estreptococo. Es muy frecuente, especialmente en niños, y suele acompañar a resfriados y gripes.",
+    "symptoms": "Dolor de garganta que empeora al tragar, enrojecimiento de la garganta, placas blancas o pus en las amígdalas (en casos bacterianos), fiebre, ganglios del cuello inflamados, ronquera, dolor de cabeza y pérdida de apetito.",
+    "treatment": "La faringitis viral se trata con reposo, hidratación, analgésicos y gargarismos con agua salada. La bacteriana (estreptocócica) requiere antibióticos (amoxicilina o penicilina) para evitar complicaciones. Los casos recurrentes pueden requerir amigdalectomía."
+  },
+  {
+    "name": "Otitis",
+    "aliases": [
+      "otitis media",
+      "otitis externa",
+      "infección de oído"
+    ],
+    "description": "La otitis es la inflamación o infección del oído, que puede afectar al oído externo (otitis externa) o al oído medio (otitis media). Es muy frecuente en niños. Puede ser causada por bacterias, virus u hongos.",
+    "symptoms": "Dolor de oído (otalgia), sensación de presión o taponamiento en el oído, pérdida parcial de audición, secreción del oído, fiebre (especialmente en niños), irritabilidad en bebés, picor en el canal auditivo.",
+    "treatment": "Analgésicos para el dolor. La otitis media bacteriana se trata con antibióticos (amoxicilina). La otitis externa con gotas óticas antibióticas o antifúngicas. Aplicar calor local puede aliviar el dolor. Mantener el oído seco durante la infección."
+  },
+  {
+    "name": "Conjuntivitis",
+    "aliases": [
+      "ojo rojo",
+      "conjuntivitis viral",
+      "conjuntivitis bacteriana",
+      "conjuntivitis alérgica"
+    ],
+    "description": "La conjuntivitis es la inflamación de la conjuntiva, la membrana transparente que recubre el ojo y el interior del párpado. Puede ser viral, bacteriana o alérgica. La viral y bacteriana son muy contagiosas.",
+    "symptoms": "Enrojecimiento del ojo, picor o escozor ocular, lagrimeo excesivo, secreción ocular (legañas), especialmente abundante por las mañanas, sensación de arenilla en el ojo, sensibilidad a la luz.",
+    "treatment": "Conjuntivitis viral: se resuelve sola en 1-2 semanas con lavados oculares con suero salino. Bacteriana: colirios antibióticos. Alérgica: colirios antihistamínicos y evitar el alérgeno. Lavarse bien las manos para evitar el contagio."
+  },
+  {
+    "name": "Migraña",
+    "aliases": [
+      "jaqueca",
+      "migraña con aura"
+    ],
+    "description": "La migraña es un trastorno neurológico crónico que se caracteriza por episodios recurrentes de dolor de cabeza intenso, generalmente en un lado de la cabeza. Puede ir acompañada de aura (alteraciones visuales o neurológicas) antes del dolor. Afecta más a mujeres que a hombres.",
+    "symptoms": "Dolor de cabeza pulsátil intenso (generalmente unilateral), náuseas y vómitos, extrema sensibilidad a la luz y al sonido, aura previa (destellos visuales, hormigueo, dificultad para hablar). Los episodios pueden durar de 4 a 72 horas.",
+    "treatment": "Analgésicos (ibuprofeno, paracetamol) tomados al inicio del episodio. Triptanes para migrañas moderadas o severas. Reposo en habitación oscura y silenciosa. Para prevenir los ataques frecuentes: beta bloqueantes, topiramato, amitriptilina o anticuerpos anti-CGRP."
+  },
+  {
+    "name": "Epilepsia",
+    "aliases": [
+      "crisis epiléptica",
+      "convulsiones"
+    ],
+    "description": "La epilepsia es un trastorno neurológico crónico caracterizado por crisis epilépticas recurrentes causadas por descargas eléctricas anormales en el cerebro. Existen muchos tipos de crisis, desde ausencias breves hasta convulsiones generalizadas.",
+    "symptoms": "Crisis convulsivas con movimientos involuntarios de brazos y piernas, pérdida de conciencia, rigidez muscular, confusión temporal después de la crisis, mirada fija y ausente, movimientos repetitivos automáticos.",
+    "treatment": "Medicamentos antiepilépticos (levetiracetam, valproato, lamotrigina) para controlar las crisis. En casos resistentes: cirugía, estimulación del nervio vago o dieta cetogénica. Ante una crisis: proteger a la persona de golpes, colocarla de lado, no introducir nada en la boca."
+  },
+  {
+    "name": "Depresión",
+    "aliases": [
+      "depresión mayor",
+      "trastorno depresivo"
+    ],
+    "description": "La depresión es un trastorno del estado de ánimo que causa sentimientos persistentes de tristeza, vacío y pérdida de interés. No es simplemente estar triste — es una enfermedad que afecta a cómo piensa, siente y actúa una persona, interfiriendo con su vida diaria.",
+    "symptoms": "Tristeza persistente o sensación de vacío, pérdida de interés en actividades antes placenteras, cambios en el apetito y el peso, insomnio o exceso de sueño, fatiga, dificultad para concentrarse, sentimientos de inutilidad o culpa excesiva, pensamientos de muerte o suicidio.",
+    "treatment": "Psicoterapia (terapia cognitivo-conductual), antidepresivos (ISRS como fluoxetina o sertralina), o combinación de ambos. El apoyo social es fundamental. En casos graves puede ser necesaria la hospitalización. El tratamiento requiere tiempo y constancia."
+  },
+  {
+    "name": "Ansiedad",
+    "aliases": [
+      "trastorno de ansiedad",
+      "ansiedad generalizada",
+      "crisis de ansiedad",
+      "ataque de pánico"
+    ],
+    "description": "El trastorno de ansiedad es una enfermedad mental caracterizada por preocupación excesiva e incontrolable que interfiere con la vida diaria. Las crisis de pánico son episodios intensos de miedo repentino con síntomas físicos intensos.",
+    "symptoms": "Preocupación excesiva y difícil de controlar, nerviosismo y tensión, aceleración del corazón, sudoración, temblores, dificultad para respirar, sensación de ahogo, mareos, miedo intenso, dificultad para concentrarse, insomnio, irritabilidad.",
+    "treatment": "Psicoterapia (terapia cognitivo-conductual), técnicas de relajación y mindfulness, ejercicio físico regular. Medicamentos: ansiolíticos (benzodiacepinas a corto plazo) o antidepresivos ISRS para el tratamiento a largo plazo. Evitar la cafeína y el alcohol."
+  },
+  {
+    "name": "Artritis",
+    "aliases": [
+      "artritis reumatoide",
+      "osteoartritis",
+      "artrosis"
+    ],
+    "description": "La artritis es la inflamación de una o más articulaciones. La artritis reumatoide es una enfermedad autoinmune. La osteoartritis (artrosis) es la forma más común y se debe al desgaste del cartílago articular con la edad. Ambas causan dolor e incapacidad funcional.",
+    "symptoms": "Dolor articular, rigidez (especialmente por la mañana), inflamación y enrojecimiento de las articulaciones, reducción del rango de movimiento, fatiga, fiebre leve (en artritis reumatoide), deformidades articulares en casos avanzados.",
+    "treatment": "Analgésicos y antiinflamatorios (ibuprofeno, naproxeno), fisioterapia y ejercicio adaptado, termoterapia (calor o frío local). En artritis reumatoide: fármacos modificadores de la enfermedad (metotrexato) o biológicos. En casos avanzados puede necesitarse cirugía de reemplazo articular."
+  },
+  {
+    "name": "Osteoporosis",
+    "aliases": [
+      "huesos débiles",
+      "pérdida de densidad ósea"
+    ],
+    "description": "La osteoporosis es una enfermedad en la que los huesos se vuelven frágiles y porosos debido a la pérdida de densidad ósea. Afecta especialmente a mujeres posmenopáusicas y personas mayores. El principal riesgo es la fractura ante traumatismos mínimos.",
+    "symptoms": "Generalmente no produce síntomas hasta que ocurre una fractura. Puede haber dolor de espalda por fracturas vertebrales, pérdida de estatura progresiva, postura encorvada. Las fracturas más frecuentes son en cadera, muñeca y columna.",
+    "treatment": "Suplementos de calcio y vitamina D, ejercicio con carga de peso (caminar, bailar), evitar el tabaco y el alcohol. Medicamentos: bifosfonatos (alendronato), ranelato de estroncio o denosumab. Prevención de caídas en el hogar."
+  },
+  {
+    "name": "Hipotiroidismo",
+    "aliases": [
+      "tiroides baja",
+      "hipotiroidismo primario"
+    ],
+    "description": "El hipotiroidismo es una enfermedad en la que la glándula tiroides no produce suficiente hormona tiroidea. Esto ralentiza el metabolismo del cuerpo. La causa más frecuente es la tiroiditis de Hashimoto, una enfermedad autoinmune.",
+    "symptoms": "Fatiga y somnolencia excesiva, sensación de frío constante, estreñimiento, piel seca, caída de cabello, aumento de peso sin causa aparente, depresión, memoria y concentración reducidas, voz ronca, menstruaciones irregulares.",
+    "treatment": "Levotiroxina sódica (hormona tiroidea sintética) tomada diariamente en ayunas. La dosis se ajusta según análisis de sangre periódicos (TSH). El tratamiento es de por vida en la mayoría de los casos."
+  },
+  {
+    "name": "Hipertiroidismo",
+    "aliases": [
+      "tiroides alta",
+      "enfermedad de Graves"
+    ],
+    "description": "El hipertiroidismo ocurre cuando la glándula tiroides produce demasiada hormona tiroidea, acelerando el metabolismo. La causa más común es la enfermedad de Graves, un trastorno autoinmune. También puede ser causado por nódulos tiroideos.",
+    "symptoms": "Pérdida de peso a pesar de comer bien, ritmo cardíaco acelerado o irregular, nerviosismo y ansiedad, temblores en las manos, sudoración excesiva, sensación de calor, diarrea, ojos prominentes (en enfermedad de Graves), fatiga muscular.",
+    "treatment": "Medicamentos antitiroideos (metimazol, propiltiouracilo) que reducen la producción de hormonas. Yodo radioactivo para destruir el tejido tiroideo. Beta bloqueantes para controlar los síntomas cardíacos. En algunos casos se requiere cirugía (tiroidectomía)."
+  },
+  {
+    "name": "Anemia",
+    "aliases": [
+      "anemia ferropénica",
+      "anemia por déficit de hierro"
+    ],
+    "description": "La anemia es una condición en la que el cuerpo no tiene suficientes glóbulos rojos sanos para transportar oxígeno a los tejidos. La causa más común es la deficiencia de hierro. También puede deberse a déficit de vitamina B12 o ácido fólico, o a enfermedades crónicas.",
+    "symptoms": "Fatiga y debilidad generalizada, palidez de piel y mucosas, dificultad para respirar, mareos y sensación de desmayo, dolor de cabeza, manos y pies fríos, dolor en el pecho, ritmo cardíaco acelerado.",
+    "treatment": "Depende de la causa. Anemia ferropénica: suplementos de hierro oral o intravenoso, dieta rica en hierro (carnes rojas, legumbres, espinacas). Anemia por B12: inyecciones de vitamina B12. En casos graves puede requerirse transfusión de sangre."
+  },
+  {
+    "name": "Varicela",
+    "aliases": [
+      "viruela loca",
+      "chickenpox"
+    ],
+    "description": "La varicela es una enfermedad viral muy contagiosa causada por el virus varicela-zóster. Es típica de la infancia aunque puede afectar a adultos con mayor gravedad. Después de pasar la enfermedad, el virus permanece latente y puede reactivarse años después como herpes zóster.",
+    "symptoms": "Erupción cutánea que evoluciona de manchas rojas a vesículas (ampollas) llenas de líquido y finalmente costras, picor intenso, fiebre moderada, malestar general, pérdida de apetito. Las lesiones aparecen en oleadas durante 3-5 días.",
+    "treatment": "Reposo y aislamiento para evitar el contagio. Antihistamínicos y lociones como calamina para el picor. Analgésicos (evitar aspirina en niños). Antivirales (aciclovir) en adultos, inmunodeprimidos o casos graves. Existe vacuna preventiva eficaz."
+  },
+  {
+    "name": "Sarampión",
+    "aliases": [
+      "measles"
+    ],
+    "description": "El sarampión es una enfermedad viral altamente contagiosa que puede causar complicaciones graves como neumonía, encefalitis y muerte. Aunque la vacunación lo ha reducido enormemente, sigue siendo una causa importante de mortalidad infantil en países sin cobertura vacunal adecuada.",
+    "symptoms": "Fiebre alta, tos, coriza (moqueo nasal), conjuntivitis, manchas de Koplik en la mucosa oral, erupción cutánea característica que comienza en la cara y se extiende al resto del cuerpo, sensibilidad a la luz.",
+    "treatment": "No existe tratamiento antiviral específico. Reposo, hidratación, fiebre con paracetamol. Vitamina A en niños desnutridos para reducir complicaciones. La vacuna triple vírica (sarampión, rubéola, parotiditis) es la mejor prevención. Las personas no vacunadas deben ser aisladas."
+  },
+  {
+    "name": "Tuberculosis",
+    "aliases": [
+      "TBC",
+      "Koch"
+    ],
+    "description": "La tuberculosis es una enfermedad infecciosa causada por la bacteria Mycobacterium tuberculosis. Afecta principalmente a los pulmones pero puede afectar a otros órganos. Se transmite por el aire al toser, estornudar o hablar una persona infectada.",
+    "symptoms": "Tos persistente de más de 3 semanas (puede producir sangre), dolor en el pecho, pérdida de peso involuntaria, fatiga, fiebre (especialmente por las tardes), sudores nocturnos, pérdida de apetito.",
+    "treatment": "Tratamiento antibiótico combinado durante 6 meses mínimo (isoniazida, rifampicina, pirazinamida, etambutol). Es fundamental completar todo el tratamiento para evitar resistencias. Las personas cercanas deben hacerse pruebas. Existe vacuna BCG para la prevención."
+  },
+  {
+    "name": "Hepatitis",
+    "aliases": [
+      "hepatitis A",
+      "hepatitis B",
+      "hepatitis C",
+      "hepatitis viral"
+    ],
+    "description": "La hepatitis es la inflamación del hígado, generalmente causada por virus (A, B, C, D, E). La hepatitis A se transmite por alimentos contaminados. La B y C por sangre o contacto sexual y pueden volverse crónicas causando cirrosis o cáncer de hígado.",
+    "symptoms": "Ictericia (piel y ojos amarillos), orina oscura, heces claras, fatiga extrema, náuseas y vómitos, dolor abdominal (zona del hígado), pérdida de apetito, fiebre leve, picor en la piel.",
+    "treatment": "Hepatitis A: reposo y tratamiento sintomático, se cura sola. Hepatitis B crónica: antivirales (tenofovir, entecavir). Hepatitis C: antivirales de acción directa (sofosbuvir) con tasas de curación superiores al 95%. Existen vacunas para hepatitis A y B."
+  },
+  {
+    "name": "Cirrosis",
+    "aliases": [
+      "cirrosis hepática"
+    ],
+    "description": "La cirrosis es una enfermedad hepática crónica en la que el tejido normal del hígado es reemplazado por tejido cicatricial (fibrosis), lo que afecta gravemente su funcionamiento. Las causas más frecuentes son el consumo crónico de alcohol y la hepatitis viral crónica.",
+    "symptoms": "Fatiga y debilidad, pérdida de apetito y peso, náuseas, ictericia (piel y ojos amarillos), acumulación de líquido en el abdomen (ascitis), piernas hinchadas, tendencia a los hematomas, sangrado de varices esofágicas, confusión mental (encefalopatía hepática).",
+    "treatment": "No existe cura. El objetivo es detener la progresión: tratar la causa subyacente (abstinencia de alcohol, antivirales), dieta baja en sal, diuréticos para la ascitis, beta bloqueantes para prevenir hemorragias. El trasplante hepático es la única opción en fases terminales."
+  },
+  {
+    "name": "Pancreatitis",
+    "aliases": [
+      "pancreatitis aguda",
+      "pancreatitis crónica"
+    ],
+    "description": "La pancreatitis es la inflamación del páncreas, una glándula que produce enzimas digestivas e insulina. La forma aguda puede ser leve o muy grave. La crónica produce daño irreversible. Las causas más frecuentes son los cálculos biliares y el consumo excesivo de alcohol.",
+    "symptoms": "Dolor abdominal intenso en la parte superior del abdomen que puede irradiar a la espalda, náuseas y vómitos, fiebre, pulso acelerado, abdomen sensible al tacto, el dolor empeora al comer. En la pancreatitis crónica: pérdida de peso y diabetes.",
+    "treatment": "Hospitalización, ayuno para dar reposo al páncreas, hidratación intravenosa, analgésicos potentes. Si hay infección bacteriana, antibióticos. En casos graves puede requerir cirugía. Eliminar la causa subyacente (evitar alcohol, tratar los cálculos biliares)."
+  },
+  {
+    "name": "Úlcera péptica",
+    "aliases": [
+      "úlcera gástrica",
+      "úlcera duodenal",
+      "úlcera de estómago"
+    ],
+    "description": "Las úlceras pépticas son llagas que se forman en el revestimiento del estómago o del intestino delgado. La causa más común es la infección por la bacteria Helicobacter pylori. El uso prolongado de antiinflamatorios (ibuprofeno, aspirina) también puede causarlas.",
+    "symptoms": "Dolor ardiente o corrosivo en el estómago (entre el ombligo y el esternón), que puede mejorar o empeorar al comer, náuseas, sensación de estar lleno, intolerancia a los alimentos grasos, ardor, vómitos, heces oscuras o sangre en vómito en casos de sangrado.",
+    "treatment": "Inhibidores de la bomba de protones (omeprazol, pantoprazol) para reducir el ácido. Si hay H. pylori: antibióticos combinados (amoxicilina, claritromicina). Evitar antiinflamatorios, tabaco y alcohol. Dieta blanda durante el tratamiento."
+  },
+  {
+    "name": "Reflujo gastroesofágico",
+    "aliases": [
+      "reflujo",
+      "ERGE",
+      "ardor de estómago",
+      "acidez"
+    ],
+    "description": "El reflujo gastroesofágico ocurre cuando el ácido del estómago sube hacia el esófago de forma recurrente. Si no se trata, puede causar inflamación del esófago (esofagitis) y en casos crónicos esófago de Barrett, un factor de riesgo de cáncer.",
+    "symptoms": "Ardor o quemazón en el pecho (pirosis) que sube hacia la garganta, regurgitación de alimentos o líquidos ácidos, dificultad para tragar, tos crónica seca, voz ronca, sensación de nudo en la garganta, los síntomas empeoran tras las comidas o al acostarse.",
+    "treatment": "Cambios en el estilo de vida: comer porciones pequeñas, no acostarse tras las comidas, elevar la cabecera de la cama, evitar alimentos grasos, picantes, café y alcohol. Antiácidos para alivio rápido. Inhibidores de la bomba de protones (omeprazol) para el tratamiento a largo plazo."
+  },
+  {
+    "name": "Hernia discal",
+    "aliases": [
+      "hernia de disco",
+      "disco herniado",
+      "protusión discal"
+    ],
+    "description": "La hernia discal ocurre cuando el núcleo blando de un disco intervertebral sobresale a través de una rotura en el anillo fibroso exterior. Puede comprimir los nervios cercanos causando dolor, entumecimiento o debilidad. Es más frecuente en la zona lumbar y cervical.",
+    "symptoms": "Dolor intenso en la zona lumbar o cervical que puede irradiar por la pierna (ciática) o el brazo, entumecimiento u hormigueo en las extremidades, debilidad muscular, el dolor empeora al toser, estornudar o sentarse durante mucho tiempo.",
+    "treatment": "En la mayoría de casos mejora con tratamiento conservador: reposo relativo, analgésicos y antiinflamatorios, fisioterapia y ejercicios específicos. Infiltraciones de corticoides en casos moderados. La cirugía solo se considera si hay déficit neurológico importante o fracaso del tratamiento conservador."
+  },
+  {
+    "name": "Lumbalgia",
+    "aliases": [
+      "dolor de espalda",
+      "dolor lumbar",
+      "lumbago"
+    ],
+    "description": "La lumbalgia es el dolor en la zona baja de la espalda (región lumbar). Es una de las causas más frecuentes de consulta médica y baja laboral. Puede ser aguda (menos de 6 semanas) o crónica (más de 3 meses). En la mayoría de casos es de origen mecánico.",
+    "symptoms": "Dolor en la zona baja de la espalda que puede irradiar a las nalgas o piernas, rigidez muscular, dificultad para inclinarse o levantarse, dolor que empeora con determinados movimientos, en reposo nocturno o al estar sentado mucho tiempo.",
+    "treatment": "Mantenerse activo (el reposo prolongado empeora la recuperación), analgésicos y antiinflamatorios, calor local, fisioterapia con ejercicios de fortalecimiento. La cirugía raramente está indicada en lumbalgia mecánica. Prevención: buena postura, ejercicio regular, evitar el sobrepeso."
+  },
+  {
+    "name": "Fibromialgia",
+    "aliases": [
+      "síndrome fibromiálgico"
+    ],
+    "description": "La fibromialgia es un trastorno crónico caracterizado por dolor musculoesquelético generalizado, fatiga, y a menudo problemas de sueño, memoria y estado de ánimo. Se cree que amplifica las sensaciones de dolor al afectar la forma en que el cerebro procesa las señales de dolor.",
+    "symptoms": "Dolor generalizado en todo el cuerpo (como ardor o punzadas), puntos sensibles al tacto (tender points), fatiga extrema, sueño no reparador, problemas de memoria y concentración (fibro-niebla), síndrome del intestino irritable, cefaleas frecuentes, sensibilidad al frío, calor, ruido y luz.",
+    "treatment": "No existe cura. El tratamiento combina: ejercicio aeróbico regular (fundamental), técnicas de manejo del estrés, terapia cognitivo-conductual. Medicamentos: duloxetina, milnacipran o pregabalina. Mejorar la higiene del sueño. El tratamiento multidisciplinar obtiene mejores resultados."
+  },
+  {
+    "name": "Psoriasis",
+    "aliases": [
+      "psoriasis en placas",
+      "psoriasis vulgar"
+    ],
+    "description": "La psoriasis es una enfermedad autoinmune crónica de la piel que acelera el ciclo de vida de las células cutáneas, provocando la acumulación de células en la superficie de la piel formando escamas y manchas rojas. No es contagiosa y tiene un componente hereditario.",
+    "symptoms": "Placas rojas cubiertas de escamas plateadas, generalmente en codos, rodillas, cuero cabelludo y zona lumbar, picor e irritación, piel seca que puede sangrar, uñas engrosadas y con fosas, articulaciones inflamadas y rígidas (artritis psoriásica).",
+    "treatment": "Cremas de corticoides tópicos, análogos de vitamina D, fototerapia (luz UVB). En casos moderados-graves: metotrexato, ciclosporina o retinoides sistémicos. Biológicos (adalimumab, ustekinumab) para casos severos. Hidratación constante de la piel e identificar y evitar los desencadenantes."
+  },
+  {
+    "name": "Eccema",
+    "aliases": [
+      "dermatitis atópica",
+      "eczema"
+    ],
+    "description": "El eccema o dermatitis atópica es una enfermedad inflamatoria crónica de la piel que causa picor intenso y erupción cutánea. Es muy frecuente en niños aunque puede persistir en la edad adulta. Está relacionado con el asma y la rinitis alérgica (marcha atópica).",
+    "symptoms": "Picor intenso (especialmente por la noche), piel seca, enrojecida e inflamada, pequeñas protuberancias que pueden supurar, piel engrosada y con costras en zonas de rascado crónico. Afecta frecuentemente a pliegues del codo, rodillas, cuello, muñecas y tobillos.",
+    "treatment": "Hidratación diaria con emolientes, evitar los factores desencadenantes (ropa de lana, jabones agresivos, sudor). Corticoides tópicos para los brotes. En casos graves: inmunosupresores tópicos (tacrolimus), dupilumab (biológico). Antihistamínicos para el picor nocturno."
+  },
+  {
+    "name": "Urticaria",
+    "aliases": [
+      "ronchas",
+      "habones",
+      "urticaria alérgica"
+    ],
+    "description": "La urticaria es una reacción cutánea que provoca la aparición de ronchas (habones) rojas, con relieve y muy pruriginosas. Puede ser aguda (menos de 6 semanas, generalmente alérgica) o crónica (más de 6 semanas). El angioedema es la hinchazón profunda de tejidos que puede acompañarla.",
+    "symptoms": "Aparición súbita de ronchas rojas y elevadas de distintos tamaños, picor intenso, sensación de ardor o escozor, las lesiones pueden aparecer en cualquier parte del cuerpo y cambiar de lugar en pocas horas, hinchazón de labios, párpados o garganta (angioedema).",
+    "treatment": "Antihistamínicos orales (cetirizina, loratadina) como tratamiento principal. Corticoides orales para brotes graves. Evitar el factor desencadenante si se identifica. El angioedema con afectación de la garganta es una emergencia médica que requiere adrenalina."
+  },
+  {
+    "name": "Gota",
+    "aliases": [
+      "artritis gotosa",
+      "hiperuricemia"
+    ],
+    "description": "La gota es un tipo de artritis causada por la acumulación de cristales de ácido úrico en las articulaciones. El ataque agudo de gota es uno de los dolores más intensos que existe. Afecta más a hombres y su incidencia aumenta con la edad, el exceso de peso y el consumo de alcohol.",
+    "symptoms": "Dolor articular súbito e intensísimo (generalmente en el dedo gordo del pie, aunque puede afectar al tobillo, rodilla o muñeca), inflamación, enrojecimiento y calor intenso en la articulación afectada. Los ataques suelen ocurrir por la noche.",
+    "treatment": "Ataque agudo: antiinflamatorios (indometacina, naproxeno), colchicina o corticoides. Prevención de nuevos ataques: alopurinol o febuxostat para reducir el ácido úrico. Cambios en la dieta: evitar carnes rojas, mariscos, alcohol (especialmente cerveza) y bebidas azucaradas. Hidratación abundante."
+  },
+  {
+    "name": "Lupus",
+    "aliases": [
+      "lupus eritematoso sistémico",
+      "LES"
+    ],
+    "description": "El lupus eritematoso sistémico es una enfermedad autoinmune crónica en la que el sistema inmunitario ataca los propios tejidos del organismo. Puede afectar a múltiples órganos incluyendo piel, articulaciones, riñones, corazón, pulmones y cerebro. Afecta principalmente a mujeres jóvenes.",
+    "symptoms": "Erupción en forma de mariposa en la cara (alas en mejillas y nariz), fatiga extrema, dolor e inflamación articular, sensibilidad al sol, fiebre sin causa aparente, caída de cabello, úlceras bucales, dolor en el pecho al respirar, problemas renales.",
+    "treatment": "No tiene cura pero se puede controlar. Antipalúdicos (hidroxicloroquina) como base del tratamiento. Antiinflamatorios y corticoides para los brotes. Inmunosupresores (azatioprina, micofenolato) para afectación de órganos. Protección solar estricta. Control médico regular."
+  },
+  {
+    "name": "Esclerosis múltiple",
+    "aliases": [
+      "EM",
+      "esclerosis en placas"
+    ],
+    "description": "La esclerosis múltiple es una enfermedad autoinmune crónica del sistema nervioso central en la que el sistema inmunitario ataca la mielina (revestimiento protector de los nervios). Provoca cicatrices (esclerosis) que interrumpen la transmisión de señales nerviosas.",
+    "symptoms": "Fatiga intensa, problemas de visión (visión borrosa o doble, pérdida de visión), entumecimiento u hormigueo en extremidades, debilidad muscular, problemas de coordinación y equilibrio, dificultad para caminar, problemas de vejiga, deterioro cognitivo, espasmos musculares.",
+    "treatment": "No tiene cura. Corticoides intravenosos para los brotes agudos. Medicamentos modificadores de la enfermedad para reducir la frecuencia de brotes: interferones, acetato de glatiramer, natalizumab, fingolimod o alemtuzumab. Fisioterapia y rehabilitación para mantener la funcionalidad."
+  },
+  {
+    "name": "Alzheimer",
+    "aliases": [
+      "demencia de Alzheimer",
+      "enfermedad de Alzheimer"
+    ],
+    "description": "El Alzheimer es la forma más común de demencia. Es una enfermedad neurodegenerativa progresiva que destruye las células cerebrales y deteriora la memoria, el pensamiento y la capacidad para realizar tareas cotidianas. No tiene cura y va empeorando con el tiempo.",
+    "symptoms": "Pérdida de memoria que afecta la vida diaria (especialmente de eventos recientes), dificultad para planificar o resolver problemas, confusión con el tiempo o el lugar, dificultad para hablar o escribir, cambios de personalidad y estado de ánimo, desorientación, en fases avanzadas: incapacidad para reconocer familiares.",
+    "treatment": "No existe cura ni tratamiento que detenga la progresión. Medicamentos sintomáticos: inhibidores de la colinesterasa (donepezilo, rivastigmina) y memantina que pueden mejorar temporalmente los síntomas. Estimulación cognitiva, apoyo familiar y cuidados adaptados a cada fase."
+  },
+  {
+    "name": "Parkinson",
+    "aliases": [
+      "enfermedad de Parkinson"
+    ],
+    "description": "La enfermedad de Parkinson es un trastorno neurológico crónico y progresivo que afecta el movimiento. Se produce por la degeneración de las neuronas que producen dopamina en el cerebro. Es la segunda enfermedad neurodegenerativa más frecuente tras el Alzheimer.",
+    "symptoms": "Temblor en reposo (especialmente en manos), rigidez muscular, lentitud de movimientos (bradicinesia), problemas de equilibrio y coordinación, pasos cortos y arrastrados al caminar, micrografía (letra pequeña), voz baja o monótona, pérdida de expresión facial.",
+    "treatment": "No tiene cura. El tratamiento principal es la levodopa (con carbidopa) que repone la dopamina. Otros medicamentos: agonistas dopaminérgicos (pramipexol), inhibidores MAO-B (selegilina). Estimulación cerebral profunda en casos avanzados. Fisioterapia, logopedia y terapia ocupacional son fundamentales."
+  },
+  {
+    "name": "Insuficiencia cardíaca",
+    "aliases": [
+      "fallo cardíaco",
+      "insuficiencia cardiaca congestiva"
+    ],
+    "description": "La insuficiencia cardíaca ocurre cuando el corazón no puede bombear suficiente sangre para satisfacer las necesidades del organismo. Puede afectar al lado derecho, izquierdo o a ambos lados del corazón. Es una enfermedad crónica que puede agravarse progresivamente.",
+    "symptoms": "Dificultad para respirar al realizar esfuerzos o al acostarse (ortopnea), fatiga y debilidad, piernas, tobillos y pies hinchados, necesidad de orinar por la noche, tos o silbidos persistentes, aumento de peso rápido por retención de líquidos, falta de apetito.",
+    "treatment": "IECA o ARA-II para reducir la carga cardíaca, beta bloqueantes, diuréticos para eliminar el exceso de líquido, espironolactona. Restricción de sal y líquidos, control diario del peso. En casos graves: desfibrilador implantable, resincronización cardíaca o trasplante de corazón."
+  },
+  {
+    "name": "Arritmia cardíaca",
+    "aliases": [
+      "fibrilación auricular",
+      "taquicardia",
+      "bradicardia"
+    ],
+    "description": "Una arritmia es un problema con la frecuencia o el ritmo de los latidos del corazón. El corazón puede latir demasiado rápido (taquicardia), demasiado lento (bradicardia) o de forma irregular. La fibrilación auricular es la arritmia sostenida más frecuente.",
+    "symptoms": "Palpitaciones o sensación de aleteo en el pecho, latidos acelerados o lentos, mareos o sensación de desmayo, dificultad para respirar, dolor o presión en el pecho, fatiga. Algunas arritmias no producen síntomas y se detectan en un electrocardiograma de rutina.",
+    "treatment": "Depende del tipo y severidad. Medicamentos antiarrítmicos, anticoagulantes (en fibrilación auricular para prevenir ictus). Ablación con catéter para eliminar el tejido causante. Marcapasos para las bradicardias. Desfibrilador implantable para arritmias potencialmente letales. Cardioversión eléctrica para restaurar el ritmo normal."
+  },
+  {
+    "name": "Trombosis venosa profunda",
+    "aliases": [
+      "TVP",
+      "trombosis",
+      "coágulo en la pierna"
+    ],
+    "description": "La trombosis venosa profunda es la formación de un coágulo de sangre en una vena profunda, generalmente en las piernas. El mayor riesgo es que el coágulo se desprenda y viaje hasta los pulmones causando una embolia pulmonar, que puede ser fatal.",
+    "symptoms": "Hinchazón en la pierna afectada, dolor o sensibilidad al caminar o al estar de pie, enrojecimiento o decoloración de la piel, calor en la zona afectada. Muchas trombosis son asintomáticas. Si hay dolor en el pecho y dificultad para respirar puede indicar embolia pulmonar (emergencia).",
+    "treatment": "Anticoagulantes (heparina inicialmente, luego acenocumarol o anticoagulantes orales directos como apixabán o rivaroxabán) durante al menos 3-6 meses. Medias de compresión. Movilización precoz. En casos graves: trombólisis o extracción del coágulo."
+  },
+  {
+    "name": "Enfermedad de Crohn",
+    "aliases": [
+      "Crohn",
+      "enfermedad inflamatoria intestinal"
+    ],
+    "description": "La enfermedad de Crohn es una enfermedad inflamatoria intestinal crónica que puede afectar a cualquier parte del tracto digestivo, desde la boca hasta el ano, aunque más frecuentemente afecta al íleon terminal y el colon. Tiene períodos de brote y remisión.",
+    "symptoms": "Diarrea crónica (a veces con sangre), dolor abdominal y calambres (especialmente en la parte inferior derecha), pérdida de peso, fatiga, fiebre durante los brotes, úlceras en la boca, fístulas, manifestaciones extraintestinales: artritis, lesiones cutáneas, inflamación ocular.",
+    "treatment": "Aminosalicilatos, corticoides para los brotes, inmunomoduladores (azatioprina, metotrexato), biológicos (infliximab, adalimumab) para casos moderados-graves. Nutrición enteral en niños. Cirugía cuando hay complicaciones. Dieta adaptada durante los brotes."
+  },
+  {
+    "name": "Colitis ulcerosa",
+    "aliases": [
+      "colitis ulcerativa",
+      "enfermedad inflamatoria intestinal"
+    ],
+    "description": "La colitis ulcerosa es una enfermedad inflamatoria intestinal crónica que afecta al colon y al recto. A diferencia de la enfermedad de Crohn, la inflamación es continua y solo afecta a la capa interna del intestino. Cursa con brotes y períodos de remisión.",
+    "symptoms": "Diarrea con sangre y mucosidad, dolor abdominal y calambres, urgencia para defecar, necesidad de defecar durante la noche, fiebre durante los brotes, fatiga, pérdida de peso, anemia por las pérdidas de sangre.",
+    "treatment": "Aminosalicilatos (mesalazina) como base del tratamiento. Corticoides para los brotes. Inmunomoduladores y biológicos para casos moderados-graves. La cirugía (colectomía) puede ser curativa en la colitis ulcerosa, a diferencia de la enfermedad de Crohn."
+  },
+  {
+    "name": "Síndrome del intestino irritable",
+    "aliases": [
+      "colon irritable",
+      "SII"
+    ],
+    "description": "El síndrome del intestino irritable es un trastorno funcional del intestino grueso que causa dolor abdominal, cambios en los hábitos intestinales y distensión abdominal sin que haya ninguna lesión orgánica detectable. Es muy frecuente y afecta más a mujeres.",
+    "symptoms": "Dolor o calambres abdominales que mejoran al defecar, hinchazón y gases, diarrea, estreñimiento, o alternancia de ambos, mucosidad en las heces, sensación de evacuación incompleta, los síntomas empeoran con el estrés o con determinados alimentos.",
+    "treatment": "No existe cura. Cambios en la dieta (dieta baja en FODMAP puede ser muy efectiva), fibra soluble, reducción del estrés, ejercicio regular. Medicamentos según el síntoma predominante: espasmolíticos, antidiarreicos (loperamida), laxantes suaves o antidepresivos a dosis bajas. Probióticos pueden ayudar."
+  },
+  {
+    "name": "Cálculos renales",
+    "aliases": [
+      "litiasis renal",
+      "piedras en el riñón",
+      "cólico nefrítico"
+    ],
+    "description": "Los cálculos renales son depósitos sólidos de minerales y sales que se forman en los riñones. Pueden permanecer en el riñón o desplazarse por el tracto urinario. Los pequeños suelen eliminarse solos, pero los grandes pueden requerir intervención. El dolor (cólico nefrítico) es uno de los más intensos.",
+    "symptoms": "Dolor intenso y agudo en la espalda, costado o parte baja del abdomen que puede irradiar a la ingle, dolor al orinar, orina rosada, roja o marrón, náuseas y vómitos, necesidad frecuente de orinar, fiebre y escalofríos si hay infección.",
+    "treatment": "Hidratación abundante para facilitar la expulsión del cálculo. Analgésicos potentes (ketorolaco, morfina) para el dolor agudo. Litotripsia extracorpórea (ondas de choque) para fragmentar los cálculos. Cirugía en casos complicados. Prevención: beber abundante agua, dieta baja en sal y proteínas animales."
+  },
+  {
+    "name": "Cistitis",
+    "aliases": [
+      "infección de orina",
+      "infección urinaria",
+      "ITU"
+    ],
+    "description": "La cistitis es la infección del tracto urinario inferior (vejiga y uretra) causada generalmente por la bacteria E. coli. Es mucho más frecuente en mujeres debido a la anatomía del tracto urinario. Puede ser recurrente en algunas mujeres.",
+    "symptoms": "Ardor o escozor al orinar, necesidad frecuente e urgente de orinar pero con poca cantidad, orina turbia o con mal olor, orina con sangre, dolor o presión en la zona pélvica o baja del abdomen, fiebre leve. Si hay fiebre alta y dolor lumbar puede indicar infección del riñón (pielonefritis).",
+    "treatment": "Antibióticos (fosfomicina, trimetoprim-sulfametoxazol, nitrofurantoína) durante 3-7 días. Mucha hidratación. Analgésicos urinarios para el dolor al orinar. Prevención: beber abundante agua, orinar después de las relaciones sexuales, higiene adecuada."
+  },
+  {
+    "name": "Endometriosis",
+    "aliases": [
+      "endometriosis pélvica"
+    ],
+    "description": "La endometriosis es una enfermedad en la que el tejido similar al endometrio (revestimiento del útero) crece fuera del útero, generalmente en los ovarios, trompas de Falopio o tejidos pélvicos. Este tejido se comporta como el endometrio: se engrosa, se desintegra y sangra con cada ciclo menstrual, pero sin poder salir del cuerpo.",
+    "symptoms": "Dolor pélvico intenso durante la menstruación (dismenorrea), dolor durante las relaciones sexuales (dispareunia), dolor al ir al baño, sangrado menstrual abundante o entre períodos, infertilidad, fatiga crónica, los síntomas no siempre correlacionan con la gravedad de la enfermedad.",
+    "treatment": "Analgésicos (ibuprofeno) para el dolor. Anticonceptivos hormonales (píldora, DIU hormonal) para reducir el crecimiento del tejido. Agonistas GnRH para inducir una menopausia temporal. Cirugía laparoscópica para extirpar los implantes. El embarazo puede aliviar los síntomas temporalmente."
+  },
+  {
+    "name": "Síndrome de ovario poliquístico",
+    "aliases": [
+      "SOP",
+      "ovarios poliquísticos"
+    ],
+    "description": "El síndrome de ovario poliquístico es un trastorno hormonal común que afecta a mujeres en edad reproductiva. Se caracteriza por niveles elevados de andrógenos (hormonas masculinas), irregularidades menstruales y presencia de múltiples quistes en los ovarios. Está relacionado con resistencia a la insulina.",
+    "symptoms": "Menstruaciones irregulares o ausentes, exceso de vello en cara, pecho y espalda (hirsutismo), acné, caída de cabello con patrón masculino, aumento de peso especialmente en el abdomen, dificultad para quedarse embarazada, piel oscura en pliegues corporales.",
+    "treatment": "Cambios en el estilo de vida: dieta saludable y ejercicio para controlar el peso y mejorar la resistencia a la insulina. Anticonceptivos hormonales para regular el ciclo. Metformina para la resistencia a la insulina. Citrato de clomifeno o letrozol para estimular la ovulación si se desea embarazo."
+  },
+  {
+    "name": "Glaucoma",
+    "aliases": [
+      "glaucoma de ángulo abierto",
+      "glaucoma de ángulo cerrado"
+    ],
+    "description": "El glaucoma es un grupo de enfermedades oculares que dañan el nervio óptico, frecuentemente debido a una presión elevada en el ojo (presión intraocular). Es la segunda causa de ceguera en el mundo. El daño al nervio óptico es irreversible, por lo que la detección precoz es crucial.",
+    "symptoms": "El glaucoma de ángulo abierto (el más común) no suele producir síntomas hasta fases avanzadas: pérdida progresiva del campo visual periférico. El de ángulo cerrado puede causar: dolor ocular intenso y súbito, visión borrosa, halos alrededor de las luces, náuseas y vómitos (urgencia oftalmológica).",
+    "treatment": "Colirios hipotensores (betabloqueantes, prostaglandinas, inhibidores de la anhidrasa carbónica) para reducir la presión intraocular. Láser (trabeculoplastia) para mejorar el drenaje del ojo. Cirugía (trabeculectomía) en casos avanzados. El tratamiento no recupera la visión perdida pero detiene la progresión."
+  },
+  {
+    "name": "Cataratas",
+    "aliases": [
+      "catarata ocular"
+    ],
+    "description": "Las cataratas son el enturbiamiento del cristalino del ojo, la lente natural que enfoca la luz en la retina. Es la principal causa de ceguera reversible en el mundo. Están relacionadas principalmente con el envejecimiento, aunque también pueden ser congénitas o causadas por traumatismos o medicamentos.",
+    "symptoms": "Visión borrosa o nublada, dificultad para ver de noche, sensibilidad a la luz y al deslumbramiento, ver halos alrededor de las luces, los colores parecen apagados o amarillentos, necesidad de cambiar frecuentemente de graduación de gafas, visión doble en un ojo.",
+    "treatment": "La cirugía de cataratas es el único tratamiento efectivo y es una de las intervenciones quirúrgicas más realizadas en el mundo con excelentes resultados. Consiste en extraer el cristalino opaco y reemplazarlo por una lente artificial. Se realiza de forma ambulatoria con anestesia local."
+  },
+  {
+    "name": "Apnea del sueño",
+    "aliases": [
+      "apnea obstructiva del sueño",
+      "SAHOS"
+    ],
+    "description": "La apnea del sueño es un trastorno en el que la respiración se detiene y se reanuda repetidamente durante el sueño. La forma más común es la apnea obstructiva, causada por la relajación de los músculos de la garganta. No tratada aumenta el riesgo cardiovascular.",
+    "symptoms": "Ronquidos intensos, episodios de dejar de respirar durante el sueño (observados por el compañero de cama), despertar con sensación de ahogo, somnolencia diurna excesiva, dolor de cabeza matutino, dificultad para concentrarse, irritabilidad, boca seca al despertar.",
+    "treatment": "CPAP (presión positiva continua en la vía aérea) es el tratamiento más efectivo: una mascarilla que mantiene las vías abiertas durante el sueño. Pérdida de peso, evitar el alcohol y los sedantes antes de dormir, posición lateral para dormir. Dispositivos bucales o cirugía en casos seleccionados."
+  },
+  {
+    "name": "Insomnio",
+    "aliases": [
+      "trastorno del sueño",
+      "dificultad para dormir"
+    ],
+    "description": "El insomnio es la dificultad persistente para conciliar o mantener el sueño, o la sensación de sueño no reparador, que causa deterioro en el funcionamiento diario. Puede ser agudo (días o semanas) o crónico (más de 3 meses). El estrés y la ansiedad son causas frecuentes.",
+    "symptoms": "Dificultad para conciliar el sueño, despertarse durante la noche y no poder volver a dormir, despertar demasiado pronto por la mañana, sensación de cansancio al levantarse, somnolencia diurna, irritabilidad, dificultad para concentrarse, ansiedad al llegar la hora de dormir.",
+    "treatment": "Higiene del sueño: horarios regulares, ambiente oscuro y fresco, evitar pantallas antes de dormir, evitar cafeína y alcohol. Terapia cognitivo-conductual para el insomnio (TCC-I) es el tratamiento de elección a largo plazo. Medicamentos: somníferos (solo a corto plazo), melatonina para regular el ciclo sueño-vigilia."
+  },
+  {
+    "name": "Hipoglucemia",
+    "aliases": [
+      "bajada de azúcar",
+      "bajo nivel de glucosa"
+    ],
+    "description": "La hipoglucemia es un nivel de azúcar en sangre por debajo de 70 mg/dL. Es más frecuente en personas con diabetes que toman insulina o ciertos medicamentos antidiabéticos. También puede ocurrir en personas sin diabetes en ayunas prolongados o por consumo de alcohol.",
+    "symptoms": "Temblores, sudoración, palpitaciones, sensación de hambre intensa, palidez, mareos, dolor de cabeza, irritabilidad o nerviosismo, dificultad para concentrarse, visión borrosa. En casos graves: confusión, convulsiones o pérdida de conciencia.",
+    "treatment": "Administrar 15-20 g de azúcar de acción rápida: zumo de naranja, azúcar, caramelos o glucosa en gel. Repetir en 15 minutos si no mejora. Una vez recuperado, tomar un snack con carbohidratos complejos. En casos graves (inconsciente): glucagón inyectable o llamar al 112."
+  },
+  {
+    "name": "Deshidratación",
+    "aliases": [
+      "falta de hidratación",
+      "pérdida de líquidos"
+    ],
+    "description": "La deshidratación ocurre cuando el cuerpo pierde más líquido del que ingiere. Puede deberse a sudoración excesiva, vómitos, diarrea, fiebre o ingesta insuficiente de líquidos. Puede ser leve, moderada o grave, siendo esta última una emergencia médica.",
+    "symptoms": "Sed intensa, orina oscura y escasa, boca y piel secas, fatiga, mareos, dolor de cabeza, confusión, ojos hundidos, latido cardíaco acelerado. En bebés: fontanela hundida, llanto sin lágrimas, pañales secos.",
+    "treatment": "Leve-moderada: hidratación oral con agua y sales de rehidratación oral (suero). Evitar refrescos, zumos concentrados y bebidas con cafeína. Grave: hospitalización con sueroterapia intravenosa. En niños y ancianos la deshidratación puede ser muy rápida y grave."
+  },
+  {
+    "name": "Intoxicación alimentaria",
+    "aliases": [
+      "toxiinfección alimentaria",
+      "envenenamiento por alimentos"
+    ],
+    "description": "La intoxicación alimentaria ocurre al consumir alimentos contaminados por bacterias (Salmonella, E. coli, Listeria), virus o toxinas. Los síntomas suelen aparecer entre pocas horas y varios días después de consumir el alimento contaminado.",
+    "symptoms": "Náuseas y vómitos, diarrea (puede contener sangre en casos bacterianos), dolor y calambres abdominales, fiebre, escalofríos, dolor de cabeza, debilidad y fatiga. Los síntomas generalmente se resuelven en 1-3 días, aunque algunos casos pueden ser graves.",
+    "treatment": "Hidratación abundante con agua y sales de rehidratación oral. Reposo. Dieta blanda. Evitar lácteos, alimentos grasos y picantes. Los antibióticos solo se usan en casos bacterianos graves o en poblaciones de riesgo. Consultar al médico si hay fiebre alta, sangre en heces o síntomas intensos."
+  },
+  {
+    "name": "Quemaduras",
+    "aliases": [
+      "quemadura térmica",
+      "quemadura solar"
+    ],
+    "description": "Las quemaduras son lesiones tisulares causadas por el calor, sustancias químicas, electricidad, radiación o fricción. Se clasifican por su profundidad: primer grado (superficial, solo epidermis), segundo grado (dermis afectada, ampollas) y tercer grado (todas las capas de la piel).",
+    "symptoms": "Primer grado: enrojecimiento, dolor y leve hinchazón. Segundo grado: ampollas, dolor intenso, piel húmeda y rojiza. Tercer grado: piel ennegrecida o blanquecina, sin dolor (nervios destruidos), aspecto coriáceo. Las quemaduras extensas pueden causar shock.",
+    "treatment": "Primer grado: enfriar con agua fría (no helada) durante 10-20 min, no aplicar mantequilla ni pasta de dientes. Segundo grado: misma medida, cubrir con vendaje estéril, no reventar las ampollas. Tercer grado y quemaduras extensas: emergencia médica. Llamar al 112. Nunca retirar la ropa adherida."
+  },
+  {
+    "name": "Fractura ósea",
+    "aliases": [
+      "fractura",
+      "hueso roto"
+    ],
+    "description": "Una fractura es la rotura total o parcial de un hueso. Puede ser causada por un traumatismo, una caída o, en el caso de la osteoporosis, por un esfuerzo mínimo. Las fracturas pueden ser simples (el hueso no perfora la piel) o abiertas (el hueso sale a través de la piel).",
+    "symptoms": "Dolor intenso e inmediato en la zona, incapacidad para mover la parte afectada, inflamación y hematoma, deformidad visible del miembro, sonido de crujido en el momento de la lesión, entumecimiento u hormigueo (si hay afectación nerviosa).",
+    "treatment": "Inmovilizar la zona fracturada sin intentar recolocar el hueso. Aplicar hielo envuelto en tela. Acudir a urgencias. El tratamiento médico puede incluir: férula o escayola, tracción, clavos o placas quirúrgicas. Las fracturas abiertas requieren cirugía urgente y antibióticos."
+  },
+  {
+    "name": "Esguince",
+    "aliases": [
+      "torcedura",
+      "distensión ligamentosa"
+    ],
+    "description": "Un esguince es la lesión de los ligamentos que rodean una articulación, causada por un movimiento forzado que estira o desgarra estos tejidos. El tobillo es la articulación más frecuentemente afectada. Se clasifica en tres grados según la gravedad.",
+    "symptoms": "Dolor articular de aparición inmediata, hinchazón, hematoma (moratón), dificultad o imposibilidad para apoyar peso sobre la articulación afectada, inestabilidad articular en los esguinces graves, calor local.",
+    "treatment": "Protocolo RICE: Reposo (Rest), Hielo (Ice) aplicado 20 min cada 2-3 horas, Compresión con vendaje elástico, Elevación del miembro. Analgésicos y antiinflamatorios. Fisioterapia para recuperar la movilidad y estabilidad. Los esguinces graves de grado III pueden requerir cirugía."
+  },
+  {
+    "name": "Conjuntivitis alérgica",
+    "aliases": [
+      "alergia ocular",
+      "ojos alérgicos"
+    ],
+    "description": "La conjuntivitis alérgica es la inflamación de la conjuntiva ocular en respuesta a un alérgeno. Es la manifestación ocular más frecuente de las alergias. Suele asociarse a rinitis alérgica (fiebre del heno). Es muy molesta pero no peligrosa para la visión.",
+    "symptoms": "Picor intenso en los ojos (síntoma cardinal), enrojecimiento, lagrimeo excesivo, sensación de ardor o arenilla, párpados hinchados, secreción acuosa, los síntomas empeoran con la exposición al alérgeno (polen, ácaros, pelo de animales).",
+    "treatment": "Evitar el alérgeno desencadenante. Compresas frías para aliviar el picor. Colirios antihistamínicos (ketotifeno, olopatadina) o estabilizadores de mastocitos (cromoglicato). Antihistamínicos orales si hay rinitis alérgica asociada. En casos graves, colirios de corticoides (bajo supervisión médica)."
+  },
+  {
+    "name": "Rinitis alérgica",
+    "aliases": [
+      "alergia nasal",
+      "fiebre del heno",
+      "polinosis"
+    ],
+    "description": "La rinitis alérgica es la inflamación de la mucosa nasal causada por una respuesta alérgica a sustancias como el polen, los ácaros del polvo, el pelo de animales o los hongos. Puede ser estacional (más frecuente en primavera) o perenne.",
+    "symptoms": "Estornudos frecuentes y en salvas, moqueo acuoso abundante, congestión y obstrucción nasal, picor nasal, palatino y ocular, lagrimeo, los síntomas empeoran al estar en contacto con el alérgeno y frecuentemente se acompaña de conjuntivitis alérgica.",
+    "treatment": "Evitar el alérgeno en la medida de lo posible. Antihistamínicos orales (cetirizina, loratadina, bilastina), corticoides intranasales (fluticasona, budesonida) son el tratamiento más efectivo para el control de síntomas. La inmunoterapia (vacunas) es el único tratamiento que modifica la alergia a largo plazo."
+  },
+  {
+    "name": "Alergia alimentaria",
+    "aliases": [
+      "alergia a alimentos",
+      "alergia al cacahuete",
+      "alergia al gluten"
+    ],
+    "description": "La alergia alimentaria es una reacción del sistema inmunológico ante proteínas presentes en ciertos alimentos. Los alérgenos más frecuentes son la leche, el huevo, el pescado, los mariscos, los frutos secos, el trigo y la soja. La reacción puede ir desde leve hasta anafilaxia grave.",
+    "symptoms": "Picor u hormigueo en la boca, urticaria, eccema, enrojecimiento de la piel, inflamación de labios, lengua o garganta, síntomas digestivos (náuseas, vómitos, dolor abdominal, diarrea), dificultad para respirar, caída de la presión arterial. La anafilaxia es una emergencia.",
+    "treatment": "Evitar estrictamente el alimento causante y leer las etiquetas de los alimentos. Llevar siempre adrenalina autoinyectable (EpiPen) si hay riesgo de anafilaxia. Antihistamínicos para reacciones leves. En caso de anafilaxia: adrenalina intramuscular inmediatamente y llamar al 112."
+  },
+  {
+    "name": "Anafilaxia",
+    "aliases": [
+      "shock anafiláctico",
+      "reacción alérgica grave"
+    ],
+    "description": "La anafilaxia es una reacción alérgica grave y potencialmente mortal que ocurre de forma rápida. Puede ser causada por alimentos, medicamentos (penicilina, aspirina), picaduras de insectos o látex. Requiere tratamiento de emergencia inmediato.",
+    "symptoms": "Aparición rápida de: dificultad para respirar, hinchazón de garganta, caída brusca de la presión arterial, pulso débil y acelerado, urticaria generalizada, mareos o desmayo, náuseas y vómitos, sensación de muerte inminente. Los síntomas aparecen en minutos.",
+    "treatment": "Emergencia médica: llamar al 112 inmediatamente. Adrenalina intramuscular (EpiPen) en el muslo externo como primer tratamiento. Posición tumbada con piernas elevadas (si no hay dificultad respiratoria). Antihistamínicos y corticoides intravenosos como tratamiento secundario en el hospital."
+  },
+  {
+    "name": "COVID-19",
+    "aliases": [
+      "coronavirus",
+      "SARS-CoV-2",
+      "covid"
+    ],
+    "description": "La COVID-19 es una enfermedad infecciosa causada por el coronavirus SARS-CoV-2, que surgió a finales de 2019 y provocó una pandemia mundial. Se transmite principalmente por el aire a través de gotículas y aerosoles respiratorios. La mayoría de los casos son leves, pero puede causar enfermedad grave especialmente en personas mayores o con enfermedades previas.",
+    "symptoms": "Fiebre o escalofríos, tos seca, dificultad para respirar, fatiga, pérdida del olfato y del gusto (muy característica), dolor muscular, dolor de cabeza, dolor de garganta, congestión nasal, náuseas o diarrea. Los síntomas aparecen entre 2 y 14 días tras la exposición.",
+    "treatment": "Casos leves: reposo en casa, hidratación, paracetamol para la fiebre y el dolor, aislamiento para evitar contagios. Casos graves: hospitalización, oxigenoterapia, antivirales (nirmatrelvir/ritonavir en grupos de riesgo), dexametasona. La vacunación reduce significativamente el riesgo de enfermedad grave."
+  },
+  {
+    "name": "Herpes zóster",
+    "aliases": [
+      "culebrilla",
+      "herpes zoster",
+      "zóster"
+    ],
+    "description": "El herpes zóster (culebrilla) es una infección viral causada por la reactivación del virus varicela-zóster, que permanece latente en el sistema nervioso después de pasar la varicela. Suele aparecer en adultos mayores o personas con el sistema inmune debilitado. Puede causar dolor crónico (neuralgia postherpética).",
+    "symptoms": "Dolor, ardor o picor en una zona específica del cuerpo (generalmente el tronco o la cara), sensibilidad al tacto, erupción cutánea en forma de banda o franja de vesículas en un solo lado del cuerpo, fiebre, cefalea, sensibilidad a la luz. El dolor puede preceder a la erupción varios días.",
+    "treatment": "Antivirales (aciclovir, valaciclovir) iniciados en las primeras 72 horas reducen la gravedad y duración. Analgésicos para el dolor: paracetamol, ibuprofeno, en casos graves opioides o gabapentina. Existe vacuna (Shingrix) para prevenir el zóster en mayores de 50 años."
+  },
+  {
+    "name": "Dengue",
+    "aliases": [
+      "fiebre del dengue",
+      "dengue hemorrágico"
+    ],
+    "description": "El dengue es una enfermedad viral transmitida por la picadura del mosquito Aedes aegypti, muy común en zonas tropicales y subtropicales. La mayoría de casos son leves, pero el dengue grave puede ser fatal por hemorragias o shock.",
+    "symptoms": "Fiebre alta de inicio súbito, dolor de cabeza intenso (especialmente retroocular), dolor muscular y articular intenso (fiebre rompehuesos), náuseas, vómitos, erupción cutánea, leve sangrado (encías, nariz). Señales de alarma: dolor abdominal intenso, vómitos persistentes, sangrado.",
+    "treatment": "No existe tratamiento antiviral específico. Reposo, hidratación abundante, paracetamol para la fiebre (evitar aspirina e ibuprofeno por riesgo de sangrado). Hospitalización si hay signos de alarma o dengue grave. Prevención: evitar picaduras de mosquito, repelentes, ropa protectora, eliminar agua estancada."
+  },
+  {
+    "name": "Malaria",
+    "aliases": [
+      "paludismo",
+      "fiebre terciana"
+    ],
+    "description": "La malaria es una enfermedad potencialmente mortal causada por parásitos del género Plasmodium, transmitida por la picadura de mosquitos Anopheles hembra infectados. Es endémica en zonas tropicales de África, Asia y América Latina.",
+    "symptoms": "Fiebre periódica (cada 48-72 horas), escalofríos intensos, sudoración profusa, dolor de cabeza, dolor muscular, náuseas y vómitos, fatiga extrema, anemia. La malaria por P. falciparum puede causar malaria cerebral, insuficiencia orgánica múltiple y muerte.",
+    "treatment": "Antipalúdicos según el tipo de Plasmodium y la zona geográfica: artemisinina (primera línea para P. falciparum), cloroquina (para especies sensibles), primaquina para P. vivax. La profilaxis con antipalúdicos es fundamental al viajar a zonas endémicas. Repelentes y mosquiteras para prevención."
+  },
+  {
+    "name": "Tétanos",
+    "aliases": [
+      "tétano"
+    ],
+    "description": "El tétanos es una infección bacteriana grave causada por la toxina de Clostridium tetani, una bacteria que se encuentra en el suelo y en las heces de animales. Entra en el organismo a través de heridas cortantes o punzantes. La vacunación ha reducido drásticamente su incidencia.",
+    "symptoms": "Espasmos musculares dolorosos que comienzan en los músculos del cuello y mandíbula (trismus o 'mandíbula bloqueada'), dificultad para tragar, rigidez de los músculos del abdomen, espasmos generalizados que pueden comprometer la respiración, fiebre, sudoración, presión arterial elevada.",
+    "treatment": "Hospitalización urgente. Inmunoglobulina antitetánica para neutralizar la toxina. Antibióticos (metronidazol o penicilina). Sedantes y relajantes musculares para controlar los espasmos. Puede necesitar ventilación mecánica. La vacuna antitetánica (toxoide) es la mejor prevención; deben recordarse las dosis de refuerzo."
+  },
+  {
+    "name": "Rabia",
+    "aliases": [
+      "hidrofobia"
+    ],
+    "description": "La rabia es una infección viral del sistema nervioso central, casi siempre mortal una vez que aparecen los síntomas, causada por el virus de la rabia. Se transmite a través de la saliva de animales infectados, generalmente por mordedura (perros, murciélagos, zorros).",
+    "symptoms": "Fase prodrómica: fiebre, cefalea, malestar, dolor o parestesias en la zona de la mordedura. Fase neurológica: agitación, ansiedad, confusión, hidrofobia (miedo al agua) y aerofobia, convulsiones, parálisis progresiva, coma y muerte. Una vez con síntomas, es prácticamente mortal.",
+    "treatment": "Ante cualquier mordedura de animal potencialmente rabioso: lavar la herida abundantemente con agua y jabón durante 15 minutos, acudir a urgencias. La profilaxis postexposición (vacuna + inmunoglobulina antirrábica) es altamente efectiva si se inicia antes de que aparezcan síntomas. Vacunar a las mascotas."
+  },
+  {
+    "name": "Sarna",
+    "aliases": [
+      "escabiosis",
+      "ácaros de la sarna"
+    ],
+    "description": "La sarna es una infestación cutánea causada por el ácaro microscópico Sarcoptes scabiei. Las hembras cavan túneles bajo la piel para depositar sus huevos, provocando una reacción alérgica intensa. Se transmite por contacto piel con piel prolongado y es muy contagiosa.",
+    "symptoms": "Picor intenso que empeora por la noche, erupción cutánea con líneas finas onduladas (surcos), pequeñas vesículas o pústulas, las zonas más afectadas son los pliegues de muñecas, entre los dedos, codos, axilas, cintura y genitales. En bebés también puede afectar la cabeza.",
+    "treatment": "Permetrina en crema al 5% aplicada en todo el cuerpo (excepto cara) durante 8-12 horas, repetir en una semana. Ivermectina oral como alternativa. Tratar simultáneamente a todos los convivientes aunque no tengan síntomas. Lavar la ropa y ropa de cama a alta temperatura. El picor puede persistir semanas después del tratamiento."
+  },
+  {
+    "name": "Pie diabético",
+    "aliases": [
+      "úlcera diabética",
+      "neuropatía diabética"
+    ],
+    "description": "El pie diabético es una complicación grave de la diabetes que consiste en lesiones en los pies causadas por la combinación de neuropatía (pérdida de sensibilidad), problemas de circulación y mayor susceptibilidad a las infecciones. Puede llevar a amputaciones si no se trata correctamente.",
+    "symptoms": "Pérdida de sensibilidad en los pies (no se siente el dolor de heridas), heridas o úlceras que no cicatrizan, cambios de color en la piel del pie, inflamación, calor local, olor desagradable de las heridas infectadas, piel seca y agrietada, deformidades del pie.",
+    "treatment": "Control estricto de la glucemia, cuidado diario de los pies (inspección, hidratación, corte correcto de uñas), calzado adecuado. Las úlceras infectadas requieren antibióticos, desbridamiento y descarga de presión. En casos de isquemia severa puede ser necesaria cirugía vascular. La prevención es fundamental."
+  },
+  {
+    "name": "Angina de pecho",
+    "aliases": [
+      "angina pectoris",
+      "dolor de pecho"
+    ],
+    "description": "La angina de pecho es el dolor o malestar en el pecho causado por la reducción del flujo sanguíneo al músculo cardíaco, generalmente por estrechamiento de las arterias coronarias (arteriosclerosis). Es una señal de advertencia de enfermedad coronaria.",
+    "symptoms": "Presión, opresión o dolor en el pecho que puede irradiar al brazo izquierdo, cuello, mandíbula o espalda, el dolor suele durar de 1 a 15 minutos y se desencadena por el esfuerzo físico o el estrés y mejora con el reposo o la nitroglicerina, dificultad para respirar, fatiga.",
+    "treatment": "Nitroglicerina sublingual para el alivio inmediato del dolor. Aspirina diaria para prevenir coágulos. Beta bloqueantes, calcioantagonistas o nitratos de larga acción para prevenir las crisis. Estatinas para el colesterol. Revascularización coronaria (angioplastia o bypass) en casos severos. Cambios en el estilo de vida."
+  },
+  {
+    "name": "Hipercholesterolemia",
+    "aliases": [
+      "colesterol alto",
+      "hipercolesterolemia"
+    ],
+    "description": "La hipercolesterolemia es el exceso de colesterol en sangre. El colesterol LDL elevado (colesterol 'malo') favorece la formación de placas en las arterias (arteriosclerosis), aumentando el riesgo de infarto e ictus. Generalmente no produce síntomas y se detecta mediante análisis de sangre.",
+    "symptoms": "Generalmente asintomática. En casos severos y de larga evolución pueden aparecer xantomas (depósitos de colesterol en tendones y piel) y xantelasmas (depósitos en párpados). El principal problema es el daño arterial silencioso que puede llevar a infarto o ictus.",
+    "treatment": "Cambios en el estilo de vida: dieta mediterránea, reducir grasas saturadas y trans, aumentar el consumo de fibra, ejercicio físico regular, dejar de fumar. Si no es suficiente: estatinas (atorvastatina, rosuvastatina) como primer escalón. Ezetimiba como segundo escalón. Inhibidores PCSK9 para casos muy graves."
+  },
+  {
+    "name": "Obesidad",
+    "aliases": [
+      "sobrepeso",
+      "exceso de peso"
+    ],
+    "description": "La obesidad es una enfermedad crónica caracterizada por el exceso de grasa corporal que supone un riesgo para la salud. Se diagnostica con el índice de masa corporal (IMC ≥ 30). Es un factor de riesgo para diabetes tipo 2, enfermedades cardiovasculares, algunos cánceres y problemas articulares.",
+    "symptoms": "IMC elevado, acumulación de grasa especialmente en el abdomen, dificultad para respirar con pequeños esfuerzos, cansancio, dolores articulares especialmente en rodillas y cadera, sudoración excesiva, ronquidos y apnea del sueño, problemas de autoestima.",
+    "treatment": "Cambio de hábitos: dieta equilibrada con déficit calórico, ejercicio físico regular. Apoyo psicológico para el cambio conductual. Medicamentos (orlistat, semaglutida) como complemento. Cirugía bariátrica (bypass gástrico, manga gástrica) para casos de obesidad mórbida o cuando otros tratamientos han fallado."
+  },
+  {
+    "name": "Tiroides nódulo",
+    "aliases": [
+      "nódulo tiroideo",
+      "bocio nodular"
+    ],
+    "description": "Un nódulo tiroideo es un crecimiento anormal de células en la glándula tiroides. Son muy frecuentes y en la mayoría de casos son benignos. Sin embargo, un pequeño porcentaje puede ser maligno (cáncer de tiroides). La mayoría no producen síntomas y se descubren de forma incidental.",
+    "symptoms": "La mayoría son asintomáticos. Los grandes pueden causar: sensación de bulto en la garganta, dificultad para tragar, ronquera, tos persistente, dificultad para respirar. Si el nódulo produce hormona tiroidea (nódulo tóxico) puede causar síntomas de hipertiroidismo.",
+    "treatment": "La mayoría de nódulos benignos solo requieren seguimiento con ecografía. Los nódulos con características sospechosas requieren biopsia (PAAF). Si el nódulo es maligno: cirugía (tiroidectomía) y posiblemente yodo radioactivo. Los nódulos tóxicos se tratan con yodo radioactivo o cirugía."
+  },
+  {
+    "name": "Leucemia",
+    "aliases": [
+      "leucemia linfoblástica",
+      "leucemia mieloide",
+      "cáncer de sangre"
+    ],
+    "description": "La leucemia es un cáncer de la sangre y la médula ósea que comienza cuando las células sanguíneas sufren mutaciones y se multiplican sin control. Puede ser aguda (progresión rápida) o crónica (progresión lenta), y afectar a células linfoides o mieloides.",
+    "symptoms": "Fatiga extrema y palidez (anemia), infecciones frecuentes (falta de glóbulos blancos funcionales), sangrados o hematomas fáciles (falta de plaquetas), ganglios linfáticos inflamados, fiebre sin causa aparente, pérdida de peso, sudores nocturnos, dolor en huesos o articulaciones.",
+    "treatment": "Quimioterapia como base del tratamiento. Dependiendo del tipo: radioterapia, trasplante de médula ósea (células madre), terapias dirigidas (inhibidores de tirosina quinasa como imatinib en leucemia mieloide crónica), inmunoterapia. El pronóstico varía enormemente según el tipo y subtipo de leucemia."
+  },
+  {
+    "name": "Linfoma",
+    "aliases": [
+      "linfoma de Hodgkin",
+      "linfoma no Hodgkin",
+      "cáncer de ganglios"
+    ],
+    "description": "El linfoma es un cáncer del sistema linfático que comienza en los linfocitos (glóbulos blancos). Hay dos tipos principales: linfoma de Hodgkin (curable en la mayoría de casos) y linfoma no Hodgkin (grupo heterogéneo con distinto pronóstico).",
+    "symptoms": "Ganglios linfáticos inflamados sin dolor (cuello, axilas, ingle), fiebre, sudores nocturnos empapados, pérdida de peso inexplicable (síntomas B), fatiga, picor generalizado en la piel, sensación de plenitud abdominal por agrandamiento del bazo.",
+    "treatment": "Depende del tipo y estadio. Linfoma de Hodgkin: quimioterapia (ABVD) con o sin radioterapia, tiene altas tasas de curación. Linfoma no Hodgkin: quimioterapia, rituximab (anticuerpo monoclonal anti-CD20), radioterapia, trasplante de células madre en casos de recaída."
+  },
+  {
+    "name": "Cáncer de mama",
+    "aliases": [
+      "tumor de mama",
+      "carcinoma de mama"
+    ],
+    "description": "El cáncer de mama es el tumor maligno más frecuente en mujeres en el mundo occidental. Comienza en las células del tejido mamario. La detección precoz mediante mamografías ha mejorado enormemente la supervivencia.",
+    "symptoms": "Bulto o engrosamiento en la mama o axila, cambios en el tamaño o forma de la mama, cambios en la piel (hoyuelos, enrojecimiento, piel de naranja), inversión del pezón, secreción por el pezón (especialmente si es sanguinolenta), dolor en la mama (menos frecuente).",
+    "treatment": "Cirugía (tumorectomía o mastectomía), radioterapia postoperatoria, quimioterapia, hormonoterapia (tamoxifeno, inhibidores de la aromatasa) si el tumor es hormono-dependiente, terapias dirigidas (trastuzumab si es HER2+). El tratamiento se individualiza según las características del tumor."
+  },
+  {
+    "name": "Cáncer de pulmón",
+    "aliases": [
+      "carcinoma pulmonar",
+      "tumor de pulmón"
+    ],
+    "description": "El cáncer de pulmón es el cáncer con mayor mortalidad en el mundo. Está fuertemente asociado al tabaquismo (85% de los casos). Los dos tipos principales son el carcinoma de células no pequeñas (más frecuente) y el de células pequeñas (más agresivo).",
+    "symptoms": "Tos persistente que cambia de patrón, hemoptisis (toser sangre), dolor en el pecho, dificultad para respirar, ronquera, pérdida de peso y apetito, fatiga, infecciones respiratorias recurrentes, síntomas tardíos: dolor óseo, dolores de cabeza (metástasis).",
+    "treatment": "Cirugía si el tumor es resecable y no hay metástasis. Radioterapia y quimioterapia (cisplatino, pemetrexed). Terapias dirigidas si hay mutaciones específicas (EGFR, ALK, ROS1): gefitinib, erlotinib, crizotinib. Inmunoterapia (pembrolizumab) según expresión de PD-L1. La prevención es dejar de fumar."
+  },
+  {
+    "name": "Cáncer de próstata",
+    "aliases": [
+      "tumor de próstata",
+      "carcinoma prostático"
+    ],
+    "description": "El cáncer de próstata es el tumor maligno más frecuente en hombres. Crece lentamente en la mayoría de casos y muchos hombres mueren con él pero no a causa de él. La detección precoz con PSA es controvertida. Es más frecuente en hombres mayores de 65 años.",
+    "symptoms": "En estadios iniciales generalmente no produce síntomas. En estadios más avanzados: dificultad para orinar, chorro débil, necesidad frecuente de orinar especialmente por la noche, sangre en la orina o el semen, dolor en la zona pélvica, en casos avanzados: dolor óseo por metástasis.",
+    "treatment": "Vigilancia activa en tumores de bajo riesgo. Prostatectomía radical o radioterapia con intención curativa. Braquiterapia. Tratamiento hormonal (castración química) para estadios avanzados. Quimioterapia (docetaxel). Nuevos agentes como enzalutamida o abiraterona para metástasis resistentes a castración."
+  },
+  {
+    "name": "Cáncer colorrectal",
+    "aliases": [
+      "cáncer de colon",
+      "cáncer de recto",
+      "tumor de colon"
+    ],
+    "description": "El cáncer colorrectal es el tercer cáncer más frecuente a nivel mundial. La mayoría se desarrollan a partir de pólipos adenomatosos benignos que se vuelven malignos con el tiempo. La detección precoz mediante colonoscopia salva muchas vidas.",
+    "symptoms": "Cambios en los hábitos intestinales (diarrea o estreñimiento persistente), sangre en las heces, heces más estrechas de lo habitual, sensación de evacuación incompleta, dolor abdominal o calambres, fatiga y pérdida de peso inexplicable. Muchos casos son asintomáticos en estadios iniciales.",
+    "treatment": "Cirugía para extirpar el tumor (colectomía) es el tratamiento principal. Quimioterapia (FOLFOX, FOLFIRI) adyuvante o paliativa. Radioterapia especialmente en cáncer de recto. Anticuerpos monoclonales (bevacizumab, cetuximab) en estadios avanzados. El cribado con colonoscopia a partir de los 50 años es fundamental."
+  },
+  {
+    "name": "Melanoma",
+    "aliases": [
+      "melanoma maligno",
+      "cáncer de piel melanoma"
+    ],
+    "description": "El melanoma es el tipo más grave de cáncer de piel. Se origina en los melanocitos (células que producen pigmento). Aunque representa solo el 1% de los cánceres de piel, causa la mayoría de muertes por cáncer cutáneo. La exposición excesiva al sol y el uso de camas de bronceado son factores de riesgo principales.",
+    "symptoms": "Lunar nuevo o cambios en un lunar existente siguiendo la regla ABCDE: Asimetría, Bordes irregulares, Color no uniforme, Diámetro mayor de 6mm, Evolución o cambio. Lunar que pica, sangra o forma costras. Mancha oscura bajo las uñas.",
+    "treatment": "Cirugía para extirpar el tumor con márgenes amplios es el tratamiento principal. Inmunoterapia (pembrolizumab, nivolumab, ipilimumab) ha revolucionado el tratamiento del melanoma avanzado. Terapias dirigidas (inhibidores BRAF/MEK: vemurafenib, dabrafenib) si hay mutación BRAF. La protección solar es la mejor prevención."
+  },
+  {
+    "name": "Sepsis",
+    "aliases": [
+      "septicemia",
+      "infección generalizada"
+    ],
+    "description": "La sepsis es una respuesta inflamatoria sistémica potencialmente mortal causada por una infección. El cuerpo reacciona de forma exagerada a la infección dañando sus propios tejidos y órganos. El shock séptico es la forma más grave con caída peligrosa de la presión arterial.",
+    "symptoms": "Fiebre alta o temperatura muy baja, ritmo cardíaco acelerado, respiración rápida, confusión o desorientación, piel moteada o con manchas, disminución de la orina, presión arterial muy baja (en el shock séptico). Es una emergencia médica que requiere atención inmediata.",
+    "treatment": "Emergencia médica: hospitalización inmediata, generalmente en UCI. Antibióticos intravenosos de amplio espectro iniciados en la primera hora. Fluidoterapia para mantener la presión arterial. Vasopresores si la hipotensión no responde a los líquidos. Soporte de órganos (ventilación mecánica, diálisis) si es necesario."
+  },
+  {
+    "name": "Golpe de calor",
+    "aliases": [
+      "insolación",
+      "hipertermia",
+      "coup de chaleur"
+    ],
+    "description": "El golpe de calor es una emergencia médica que ocurre cuando la temperatura corporal sube por encima de 40°C y los mecanismos de regulación del cuerpo fallan. Puede dañar el cerebro, el corazón, los riñones y los músculos. Es más frecuente en verano durante olas de calor.",
+    "symptoms": "Temperatura corporal superior a 40°C, piel caliente y seca (en el golpe de calor clásico) o húmeda (en el de esfuerzo), confusión, agitación o delirio, pérdida de conciencia, falta de sudoración (en el clásico), dolor de cabeza pulsátil, náuseas y vómitos, ritmo cardíaco acelerado.",
+    "treatment": "Emergencia médica: llamar al 112. Enfriar al paciente inmediatamente: moverlo a un lugar fresco, rociar con agua fría, colocar hielo en cuello, axilas e ingle, abanicar. No dar líquidos si está inconsciente. En el hospital: enfriamiento activo y soporte de órganos vitales."
+  },
+  {
+    "name": "Hipotermia",
+    "aliases": [
+      "congelación",
+      "frío extremo"
+    ],
+    "description": "La hipotermia ocurre cuando la temperatura corporal desciende por debajo de 35°C, impidiendo al cuerpo mantener sus funciones normales. Se produce por exposición prolongada al frío. Puede ser leve, moderada o grave. Es una emergencia médica.",
+    "symptoms": "Escalofríos intensos (que pueden cesar en hipotermia grave), confusión y habla farfullante, piel fría y pálida o azulada, torpeza o falta de coordinación, pulso débil, respiración lenta, somnolencia y pérdida de conciencia en casos graves.",
+    "treatment": "Sacar a la persona del frío, retirar la ropa mojada y cubrirla con mantas (incluida la cabeza). No frotar la piel, calentar gradualmente. Dar bebidas calientes si está consciente y puede tragar. No dar alcohol. En casos moderados-graves: llamar al 112. En el hospital: calentamiento interno activo."
+  },
+  {
+    "name": "Ahogamiento",
+    "aliases": [
+      "casi ahogamiento",
+      "asfixia por inmersión"
+    ],
+    "description": "El ahogamiento es la insuficiencia respiratoria causada por la inmersión o sumersión en un líquido. El casi-ahogamiento se refiere a cuando la persona sobrevive. Es una de las principales causas de muerte accidental, especialmente en niños.",
+    "symptoms": "Dificultad para respirar, tos intensa, cianosis (piel azulada), confusión o pérdida de conciencia, vómitos, ritmo cardíaco irregular. Los síntomas del ahogamiento secundario (edema pulmonar tardío) pueden aparecer horas después del incidente.",
+    "treatment": "Sacar a la persona del agua de forma segura. Si no respira: iniciar RCP inmediatamente (30 compresiones + 2 ventilaciones). Llamar al 112. Mantener caliente para evitar hipotermia. Todas las personas que han sufrido un casi-ahogamiento deben ser evaluadas en urgencias por riesgo de ahogamiento secundario."
+  },
+  {
+    "name": "Intoxicación por monóxido de carbono",
+    "aliases": [
+      "intoxicación por CO",
+      "gas del carbón"
+    ],
+    "description": "El monóxido de carbono (CO) es un gas inodoro e incoloro producido por la combustión incompleta de carburantes. La intoxicación ocurre al respirar CO en espacios cerrados (braseros, estufas, calentadores de gas defectuosos). Es la intoxicación accidental más mortal.",
+    "symptoms": "Dolor de cabeza (síntoma más precoz), mareos y confusión, náuseas y vómitos, debilidad, visión borrosa, falta de coordinación, pérdida de conciencia. El color rojo cereza de la piel es un signo tardío y poco frecuente. Los síntomas pueden confundirse con una gripe.",
+    "treatment": "Emergencia médica: sacar a la persona al aire libre inmediatamente. Llamar al 112. Oxígeno al 100% en mascarilla en el hospital (el principal tratamiento). En casos graves: cámara hiperbárica. Prevención: instalar detectores de CO, ventilar correctamente los espacios con combustión, revisar regularmente calefacciones."
+  },
+  {
+    "name": "Infarto cerebral",
+    "aliases": [
+      "ictus isquémico",
+      "trombosis cerebral",
+      "embolia cerebral"
+    ],
+    "description": "El infarto cerebral o ictus isquémico ocurre cuando un coágulo de sangre bloquea una arteria cerebral, privando al tejido cerebral de oxígeno y nutrientes. Representa el 85% de todos los ictus. Cada minuto sin tratamiento equivale a la muerte de 1,9 millones de neuronas.",
+    "symptoms": "Debilidad o parálisis súbita en un lado de la cara, brazo o pierna, dificultad repentina para hablar o entender el lenguaje (afasia), visión borrosa o pérdida de visión súbita, dolor de cabeza súbito e intenso sin causa aparente, pérdida de equilibrio o coordinación.",
+    "treatment": "Emergencia médica: actuar en los primeros 4,5 horas es crucial. Llamar al 112. Trombolisis intravenosa (alteplasa) si se actúa rápido. Trombectomía mecánica para oclusiones de grandes vasos hasta 24 horas. Antiagregantes plaquetarios para prevenir nuevos episodios. Rehabilitación intensiva posterior."
+  },
+  {
+    "name": "Hernia inguinal",
+    "aliases": [
+      "hernia de ingle",
+      "hernia abdominal"
+    ],
+    "description": "Una hernia inguinal ocurre cuando una parte del intestino empuja a través de un punto débil de los músculos abdominales en la región inguinal. Es más frecuente en hombres. Puede ser directa o indirecta según su localización. Puede estrangularse, lo que es una emergencia.",
+    "symptoms": "Bulto en la ingle que puede aparecer y desaparecer (se ve más al toser, inclinarse o ponerse de pie), sensación de pesadez o presión en la ingle, dolor o molestia especialmente al agacharse, toser o levantar peso. La hernia estrangulada causa dolor intenso, náuseas y vómitos.",
+    "treatment": "La cirugía (hernioplastia) es el único tratamiento definitivo. Puede realizarse abierta o laparoscópica. Las hernias estranguladas son una emergencia quirúrgica. Las pequeñas y asintomáticas en personas mayores o con alto riesgo quirúrgico pueden vigilarse, aunque el riesgo de estrangulación existe."
+  },
+  {
+    "name": "Várices",
+    "aliases": [
+      "varices",
+      "venas varicosas",
+      "insuficiencia venosa"
+    ],
+    "description": "Las várices son venas dilatadas y tortuosas que aparecen principalmente en las piernas como consecuencia de la insuficiencia venosa crónica. Las válvulas venosas no funcionan correctamente, permitiendo que la sangre se acumule en las venas. Afectan más a mujeres.",
+    "symptoms": "Venas azuladas o moradas visibles y abultadas en las piernas, sensación de pesadez o cansancio en las piernas, dolor o calambres, picor alrededor de las venas afectadas, hinchazón de tobillos y pies (especialmente al final del día), cambios en la piel en casos avanzados.",
+    "treatment": "Medias de compresión elástica para aliviar los síntomas. Elevar las piernas. Ejercicio regular (caminar, nadar). Escleroterapia (inyección de una solución que colapsa la vena), ablación por láser o radiofrecuencia. Cirugía (extirpación de las várices) para casos graves. Evitar el sedentarismo prolongado."
+  },
+  {
+    "name": "Tensión ocular",
+    "aliases": [
+      "hipertensión ocular",
+      "presión ocular elevada"
+    ],
+    "description": "La hipertensión ocular es la elevación de la presión intraocular por encima de los valores normales (21 mmHg) sin daño detectable del nervio óptico. Es el principal factor de riesgo para desarrollar glaucoma, aunque no todas las personas con hipertensión ocular desarrollan glaucoma.",
+    "symptoms": "Generalmente no produce síntomas. En casos de elevación muy brusca puede causar: dolor ocular, visión borrosa, halos alrededor de las luces, náuseas y vómitos. Se detecta mediante tonometría en las revisiones oftalmológicas.",
+    "treatment": "No siempre requiere tratamiento inmediato. Seguimiento regular con oftalmólogo. Si el riesgo de glaucoma es alto: colirios hipotensores (betabloqueantes, análogos de prostaglandinas) para reducir la presión intraocular. El objetivo es prevenir el daño al nervio óptico."
+  },
+  {
+    "name": "Diarrea",
+    "aliases": [
+      "diarrea aguda",
+      "deposiciones sueltas",
+      "heces blandas"
+    ],
+    "description": "La diarrea es la evacuación frecuente de heces sueltas o líquidas, generalmente causada por infecciones virales, bacterianas o parasitarias, intoxicaciones alimentarias, o intolerancia a ciertos alimentos. Suele ser autolimitada y resolverse en pocos días.",
+    "symptoms": "Deposiciones sueltas o líquidas más de 3 veces al día, retortijones y dolor abdominal, náuseas, urgencia para ir al baño, fiebre leve, en casos graves deshidratación con sed intensa, boca seca y orina oscura.",
+    "treatment": "Hidratación abundante con agua y sales de rehidratación oral para reponer líquidos y electrolitos. Dieta blanda (arroz, pollo hervido, zanahoria, manzana). Evitar lácteos, grasas y alimentos picantes. Loperamida para reducir la frecuencia en adultos. Consultar si hay sangre en heces, fiebre alta o no mejora en 48 horas."
+  },
+  {
+    "name": "Cólico",
+    "aliases": [
+      "cólico abdominal",
+      "cólico del lactante",
+      "cólico biliar",
+      "cólico renal",
+      "retortijones"
+    ],
+    "description": "El cólico es un dolor abdominal intenso, espasmódico y de aparición brusca. Puede tener distintos orígenes: cólico del lactante (en bebés menores de 4 meses), cólico biliar (por cálculos en la vesícula), cólico renal (por cálculos en el riñón) o cólico intestinal por gases o espasmos.",
+    "symptoms": "Dolor abdominal agudo e intermitente que aparece en oleadas, agitación e irritabilidad intensa (en bebés), el bebé llora inconsolablemente por más de 3 horas, en adultos: dolor que puede irradiar a la espalda o al flanco, náuseas, vómitos, sudoración.",
+    "treatment": "Cólico del lactante: paseo en brazos, calor suave en el abdomen, movimiento rítmico, suprimir lácteos de la dieta materna. Cólico biliar o renal: analgésicos potentes (ketorolaco, diclofenaco), antiespasmódicos, hospitalización si es grave. Cólico intestinal: antiespasmódicos, calor local, evitar alimentos flatulentos."
+  },
+  {
+    "name": "Cefalea",
+    "aliases": [
+      "dolor de cabeza",
+      "dolor de cabeza tensional",
+      "cefalalgia"
+    ],
+    "description": "La cefalea o dolor de cabeza es una de las molestias más frecuentes. Puede ser primaria (tensional, migraña, en racimos) sin causa estructural subyacente, o secundaria a otras enfermedades como infecciones, hipertensión o traumatismos. La cefalea tensional es la más común.",
+    "symptoms": "Dolor sordo y opresivo en ambos lados de la cabeza (tensional), sensación de presión o banda alrededor de la cabeza, dolor pulsátil en un lado con náuseas y sensibilidad a la luz (migraña), dolor severo alrededor de un ojo con lagrimeo y congestión nasal (en racimos).",
+    "treatment": "Analgésicos de venta libre como paracetamol o ibuprofeno. Reposo en lugar tranquilo y oscuro. Compresas frías o calientes según el tipo. Técnicas de relajación para la cefalea tensional. Triptanes para las migrañas moderadas o graves. Consultar si es el peor dolor de cabeza de su vida, aparece con fiebre y rigidez de nuca, o tras un golpe en la cabeza."
+  },
+  {
+    "name": "Anginas",
+    "aliases": [
+      "amigdalitis",
+      "faringitis estreptocócica",
+      "dolor de garganta con placas"
+    ],
+    "description": "Las anginas o amigdalitis es la inflamación de las amígdalas, generalmente causada por bacterias estreptocócicas o virus. Es muy frecuente en niños y adultos jóvenes. La forma bacteriana requiere antibióticos para evitar complicaciones como la fiebre reumática.",
+    "symptoms": "Dolor de garganta intenso que empeora al tragar, amígdalas rojas e inflamadas con placas blancas o amarillas de pus, fiebre alta (38-40°C), ganglios del cuello inflamados y dolorosos, mal aliento, dolor de cabeza, pérdida de apetito, en niños puede haber dolor abdominal y vómitos.",
+    "treatment": "Anginas bacterianas: antibióticos (amoxicilina o penicilina) durante 10 días, es fundamental completar el tratamiento. Analgésicos y antipiréticos (paracetamol o ibuprofeno) para el dolor y la fiebre. Reposo, hidratación abundante y gargarismos con agua salada tibia. En casos recurrentes puede valorarse la amigdalectomía."
+  },
+  {
+    "name": "Estreñimiento",
+    "aliases": [
+      "constipación",
+      "estreñido",
+      "falta de deposiciones"
+    ],
+    "description": "El estreñimiento es la dificultad para evacuar o la reducción en la frecuencia de las deposiciones (menos de 3 por semana), con heces duras y secas. Puede ser agudo o crónico. Las causas más frecuentes son dieta baja en fibra, poca ingesta de líquidos, sedentarismo o ciertos medicamentos.",
+    "symptoms": "Menos de 3 deposiciones por semana, heces duras, secas y difíciles de expulsar, necesidad de hacer esfuerzo excesivo, sensación de evacuación incompleta, distensión y dolor abdominal, sensación de bloqueo en el recto.",
+    "treatment": "Aumentar el consumo de fibra (frutas, verduras, cereales integrales), beber al menos 1,5-2 litros de agua al día, ejercicio físico regular. Laxantes osmóticos (lactulosa, macrogol) o de masa (psyllium). Evitar el uso prolongado de laxantes estimulantes. Consultar si hay sangre en las heces o cambio súbito en el ritmo intestinal."
+  },
+  {
+    "name": "Dolor de espalda",
+    "aliases": [
+      "dolor de espalda alta",
+      "dolor dorsal",
+      "dorsalgia"
+    ],
+    "description": "El dolor de espalda es uno de los motivos de consulta médica más frecuentes. Puede afectar a la zona cervical, dorsal o lumbar. La mayoría de casos son de origen muscular o postural y mejoran en pocos días con tratamiento sencillo.",
+    "symptoms": "Dolor localizado en la zona alta, media o baja de la espalda, rigidez muscular, dolor que puede irradiar al brazo (si es cervical) o a la pierna (si es lumbar), empeora con determinados movimientos, al estar mucho tiempo sentado o de pie, mejora con el reposo o el movimiento suave.",
+    "treatment": "Mantenerse activo moderadamente, analgésicos y antiinflamatorios (ibuprofeno, naproxeno), calor local en la zona dolorida, fisioterapia con ejercicios específicos. Evitar el reposo absoluto prolongado ya que retrasa la recuperación. Mejorar la postura y ergonomía en el trabajo. Consultar si hay pérdida de fuerza, adormecimiento o incontinencia."
+  },
+  {
+    "name": "Mareo",
+    "aliases": [
+      "vértigo",
+      "mareos",
+      "sensación de inestabilidad",
+      "vahído"
+    ],
+    "description": "El mareo es una sensación de inestabilidad, desequilibrio o movimiento cuando uno está inmóvil. El vértigo es un tipo de mareo con sensación de giro. Las causas más frecuentes son el vértigo posicional benigno, la laberintitis, la hipotensión ortostática o la anemia.",
+    "symptoms": "Sensación de giro o movimiento (vértigo), inestabilidad al caminar, náuseas y vómitos, sudoración, palidez, sensación de desmayo, pérdida de equilibrio, zumbido en los oídos (tinnitus), los síntomas pueden desencadenarse con cambios de posición.",
+    "treatment": "Reposo en la posición que alivie los síntomas. Medicamentos antivertiginosos (betahistina, sulpiride) y antieméticos para las náuseas. La maniobra de Epley para el vértigo posicional benigno. Hidratación si hay hipotensión. Consultar urgentemente si el mareo se acompaña de dolor de cabeza intenso, dificultad para hablar o debilidad en extremidades."
+  },
+  {
+    "name": "Fiebre",
+    "aliases": [
+      "temperatura alta",
+      "calentura",
+      "febrícula",
+      "hipertermia"
+    ],
+    "description": "La fiebre es el aumento de la temperatura corporal por encima de 38°C como respuesta del sistema inmunitario ante una infección u otras enfermedades. Es un síntoma, no una enfermedad en sí misma. Generalmente es beneficiosa ya que ayuda a combatir las infecciones.",
+    "symptoms": "Temperatura corporal superior a 38°C, escalofríos y sensación de frío, sudoración, dolor de cabeza, dolores musculares generalizados, pérdida de apetito, debilidad y cansancio, piel caliente y enrojecida, en niños puede causar convulsiones febriles.",
+    "treatment": "Analgésicos y antipiréticos: paracetamol (es de primera elección) o ibuprofeno según edad y peso. Hidratación abundante. Ropa ligera y ambiente fresco. No abrigar en exceso. Compresas de agua tibia en frente y muñecas. Consultar si la fiebre es mayor de 40°C, dura más de 3 días, o se acompaña de rigidez de nuca, dificultad respiratoria o erupción."
+  },
+  {
+    "name": "Tos",
+    "aliases": [
+      "tos seca",
+      "tos con mocos",
+      "tos productiva",
+      "tos crónica"
+    ],
+    "description": "La tos es un reflejo defensivo del organismo para limpiar las vías respiratorias de irritantes, moco o cuerpos extraños. Puede ser aguda (menos de 3 semanas, generalmente infecciosa), subaguda (3-8 semanas) o crónica (más de 8 semanas con causas variadas).",
+    "symptoms": "Expulsión brusca de aire por la boca, puede ser seca o productiva con mucosidad, irritación o picor en la garganta, dolor en el pecho o abdomen por el esfuerzo de toser, en casos graves: dificultad para respirar, sangre en el esputo.",
+    "treatment": "Hidratación abundante para fluidificar las secreciones. Ambientes húmedos y evitar el humo del tabaco. Antitusivos (para la tos seca irritativa) como dextrometorfano. Mucolíticos (acetilcisteína, ambroxol) para la tos productiva. Tratar la causa subyacente. Consultar si hay sangre, dificultad para respirar, fiebre persistente o pérdida de peso."
+  },
+  {
+    "name": "Náuseas",
+    "aliases": [
+      "nauseas",
+      "ganas de vomitar",
+      "malestar gástrico"
+    ],
+    "description": "Las náuseas son la sensación desagradable de querer vomitar. Pueden tener múltiples causas: infecciones gastrointestinales, intoxicación alimentaria, embarazo, mareo por movimiento, medicamentos, migraña o ansiedad. Pueden ir o no acompañadas de vómitos.",
+    "symptoms": "Sensación de malestar en el estómago con ganas de vomitar, palidez, sudoración fría, salivación excesiva, debilidad, vértigo, en ocasiones vómitos. Las náuseas matutinas en el embarazo son especialmente frecuentes en el primer trimestre.",
+    "treatment": "Reposo, evitar olores fuertes y movimientos bruscos. Alimentación en pequeñas cantidades de alimentos blandos (galletas, tostadas). Jengibre en infusión puede aliviar las náuseas leves. Antihistamínicos (dimenhidrinato) para náuseas por movimiento. Metoclopramida o domperidona para náuseas más intensas. En el embarazo: vitamina B6 y medidas posturales."
+  },
+  {
+    "name": "Esguince de tobillo",
+    "aliases": [
+      "torcedura de tobillo",
+      "tobillo torcido"
+    ],
+    "description": "El esguince de tobillo es la lesión ligamentosa más frecuente del aparato locomotor. Ocurre cuando el pie se gira hacia dentro (inversión) estirando o desgarrando los ligamentos del lado externo del tobillo. Es muy común en deportistas y en la vida cotidiana.",
+    "symptoms": "Dolor inmediato en el tobillo, especialmente en la parte externa, inflamación y hematoma que aparece en pocas horas, dificultad o imposibilidad para apoyar el pie en el suelo, sensación de inestabilidad en el tobillo.",
+    "treatment": "Protocolo RICE las primeras 48-72 horas: Reposo (evitar apoyar el pie), Hielo 20 minutos cada 2-3 horas, Compresión con vendaje elástico, Elevación del tobillo. Analgésicos y antiinflamatorios (ibuprofeno). Fisioterapia para recuperar la movilidad y la propiocepción. La mayoría se recuperan completamente en 2-6 semanas."
+  },
+  {
+    "name": "Resfriado",
+    "aliases": [
+      "catarro",
+      "resfriado común",
+      "constipado",
+      "mocos"
+    ],
+    "description": "El resfriado común es una infección viral leve de las vías respiratorias superiores causada principalmente por rinovirus. Es la enfermedad infecciosa más frecuente. Se contagia por contacto directo o por el aire. A diferencia de la gripe, el inicio es gradual y los síntomas son menos intensos.",
+    "symptoms": "Congestión y moqueo nasal (secreción acuosa que se vuelve más espesa), estornudos, dolor de garganta leve, tos leve, malestar general, fiebre leve o ausente. Los síntomas duran entre 7 y 10 días.",
+    "treatment": "No existe tratamiento específico para el resfriado. Reposo, hidratación abundante, analgésicos para el dolor y la fiebre, descongestionantes nasales (evitar en niños menores de 6 años), lavados nasales con suero salino. Los antibióticos no son eficaces. Lavado frecuente de manos para prevenir el contagio."
+  }
+]
