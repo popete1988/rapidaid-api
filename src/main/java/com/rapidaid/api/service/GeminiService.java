@@ -6,7 +6,9 @@ import com.rapidaid.api.model.DiseaseResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.http.*;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 
 import java.util.List;
 import java.util.Map;
@@ -47,12 +49,7 @@ public class GeminiService {
         log.info("GeminiService v16 | Calling Gemini AI for: " + query + " | key starts with: " + 
             (apiKey.length() > 8 ? apiKey.substring(0, 8) + "..." : "TOO_SHORT"));
 
-        String prompt = """
-            Enfermedad: %s
-            Responde SOLO con este JSON, sin markdown, sin explicaciones:
-            {"name":"nombre","description":"que es en 1 frase","symptoms":"sintoma1, sintoma2, sintoma3","treatment":"tratamiento en 1 frase"}
-            Si no es enfermedad real: {"error":"no_disease"}
-            """.formatted(query);
+        String prompt = "Enfermedad: " + query + ". Responde SOLO con JSON: {\"name\":\"nombre\",\"description\":\"descripcion breve\",\"symptoms\":\"sintomas\",\"treatment\":\"tratamiento\"}";
 
         try {
             log.info("Sending request to Gemini API...");
@@ -64,7 +61,7 @@ public class GeminiService {
                 ),
                 "generationConfig", Map.of(
                     "temperature", 0.2,
-                    "maxOutputTokens", 300,
+                    "maxOutputTokens", 1024,
                     "responseMimeType", "application/json"
                 )
             );
@@ -72,19 +69,19 @@ public class GeminiService {
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
 
-            ResponseEntity<String> response = restTemplate.exchange(
+            // Use postForObject to get complete response body
+            String fullResponseBody = restTemplate.postForObject(
                 GEMINI_URL + apiKey,
-                HttpMethod.POST,
                 new HttpEntity<>(requestBody, headers),
                 String.class
             );
 
-            log.info("Gemini response status: " + response.getStatusCode());
-            if (response.getStatusCode() == HttpStatus.OK && response.getBody() != null) {
+            log.info("Gemini response received, body length: " + (fullResponseBody != null ? fullResponseBody.length() : 0));
+            if (fullResponseBody != null) {
                 log.info("Gemini response received, parsing...");
-                return parseGeminiResponse(response.getBody(), query);
+                return parseGeminiResponse(fullResponseBody, query);
             } else {
-                log.warning("Gemini non-OK response: " + response.getStatusCode() + " | " + response.getBody());
+                log.warning("Gemini returned null body");
             }
 
         } catch (org.springframework.web.client.HttpClientErrorException e) {
