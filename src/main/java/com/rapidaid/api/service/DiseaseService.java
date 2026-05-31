@@ -9,6 +9,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
+import java.text.Normalizer;
 import java.util.*;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -40,9 +41,16 @@ public class DiseaseService {
         }
     }
 
+    // Elimina acentos y normaliza a minúsculas para comparación flexible
+    private String normalize(String s) {
+        return Normalizer.normalize(s, Normalizer.Form.NFD)
+                .replaceAll("\\p{InCombiningDiacriticalMarks}+", "")
+                .toLowerCase();
+    }
+
     public List<DiseaseResponse> search(String query) {
         log.info("Searching: " + query);
-        String q = query.toLowerCase().trim();
+        String q = normalize(query.trim());
 
         List<DiseaseResponse> localResults = searchLocal(q);
         if (!localResults.isEmpty()) {
@@ -65,7 +73,7 @@ public class DiseaseService {
             return result;
         }
 
-        geminiCache.put(q, Collections.emptyList()); // Cache empty result too
+        geminiCache.put(q, Collections.emptyList());
         return Collections.emptyList();
     }
 
@@ -78,9 +86,9 @@ public class DiseaseService {
 
     @SuppressWarnings("unchecked")
     private boolean matchesDisease(Map<String, Object> disease, String query) {
-        String name = ((String) disease.getOrDefault("name", "")).toLowerCase();
+        // Normalizar el nombre almacenado igual que la query (sin acentos, minúsculas)
+        String name = normalize((String) disease.getOrDefault("name", ""));
 
-        // Match name: exact, starts with query, or query is a full word in the name
         if (name.equals(query)
                 || name.startsWith(query + " ")
                 || name.contains(" " + query + " ")
@@ -88,16 +96,15 @@ public class DiseaseService {
             return true;
         }
 
-        // Also match if query starts with name (e.g. query="diabetes tipo 2", name="diabetes")
         if (query.startsWith(name)) {
             return true;
         }
 
-        // Check aliases with same word-boundary logic
+        // Aliases también normalizados
         Object aliasesObj = disease.get("aliases");
         if (aliasesObj instanceof List<?> aliases) {
             for (Object alias : aliases) {
-                String a = alias.toString().toLowerCase();
+                String a = normalize(alias.toString());
                 if (a.equals(query)
                         || a.startsWith(query + " ")
                         || a.contains(" " + query + " ")
