@@ -1,0 +1,52 @@
+[
+  {
+    "id": "bebes",
+    "title": "Primeros Auxilios en Bebés",
+    "contenido": "ATRAGANTAMIENTO (menores de 1 año)\n\nColoque al bebé boca abajo sobre su antebrazo sujetando la cabeza y aplique 5 golpes firmes entre los omóplatos con el talón de la mano. Gírelo boca arriba y aplique 5 compresiones en el esternón con 2 dedos. Repita hasta expulsar el objeto.\n\nNunca realice la maniobra de Heimlich abdominal en bebés menores de 1 año.\n\nFIEBRE\n\nAnte fiebre mayor de 38°C: no abrigue en exceso al bebé. Administre antitérmico pediátrico según el peso indicado por su médico. Ofrezca líquidos frecuentemente. Consulte al médico si la fiebre supera los 38°C en menores de 3 meses.\n\nCONVULSIÓN FEBRIL\n\nColoque al bebé en posición lateral de seguridad. No introduzca nada en la boca. Cronometree la duración.\n\nLlame al 112 si la convulsión dura más de 5 minutos o si es la primera vez que ocurre."
+  },
+  {
+    "id": "ciclismo",
+    "title": "Ciclismo",
+    "contenido": "Use siempre casco homologado y correctamente ajustado: puede salvarle la vida.\n\nLleve luces delantera blanca y trasera roja con poca visibilidad, y ropa o accesorios reflectantes.\n\nRevise frenos, neumáticos y luces antes de cada salida. Lleve agua, un snack energético y herramienta básica (llave allen, parche).\n\nEn caso de caída con golpe en la cabeza: no retire el casco usted mismo, acuda a urgencias aunque se sienta bien.\n\nSeñalice los cambios de dirección extendiendo el brazo. Si sufre un pinchazo, apártese completamente de la calzada antes de repararlo."
+  },
+  {
+    "id": "conduccion",
+    "title": "Conducción Segura",
+    "contenido": "Lleve siempre en el vehículo: dos triángulos de emergencia, chaleco reflectante accesible desde el interior, extintor y botiquín básico.\n\nEn caso de accidente: encienda las luces de emergencia, colóquese el chaleco ANTES de salir del vehículo y coloque los triángulos a 50 metros por delante y por detrás.\n\nNo mueva a los heridos salvo peligro inminente de incendio o explosión. Llame al 112.\n\nNunca conduzca bajo los efectos del alcohol, drogas o medicamentos que adviertan sobre el manejo de maquinaria.\n\nDescanse cada 2 horas en trayectos largos. La fatiga es una de las principales causas de accidente."
+  },
+  {
+    "id": "deportes",
+    "title": "Deporte al Aire Libre",
+    "contenido": "Realice siempre un calentamiento de al menos 10 minutos antes de la actividad para prevenir lesiones musculares y articulares.\n\nHidratación constante: beba agua antes, durante y después del ejercicio.\n\nAnte un tirón muscular: detenga la actividad, aplique hielo 20 minutos, vendaje compresivo y eleve el miembro (protocolo RICE).\n\nAnte un golpe fuerte en la cabeza con pérdida de conciencia, confusión, vómitos o visión doble: acuda a urgencias aunque se sienta bien después.\n\nNo continúe practicando si siente dolor agudo, mareo o visión borrosa. En entornos naturales, informe siempre de su ruta y hora de regreso."
+  },
+  {
+    "id": "hogar",
+    "title": "Hogar",
+    "contenido": "Tenga un botiquín completo y actualizado en un lugar accesible pero fuera del alcance de los niños.\n\nInstale detectores de humo en cada planta y compruébelos mensualmente.\n\nConozca la ubicación de la llave de corte del gas y el cuadro eléctrico principal.\n\nMantenga productos de limpieza y medicamentos bajo llave o en armarios altos, siempre fuera del alcance de los niños.\n\nTenga un extintor de polvo ABC accesible en cocina y garaje. Aprenda técnicas básicas de RCP: puede salvar una vida.\n\nTenga visible la lista de números de emergencia: 112, médico, farmacia de guardia y vecino de confianza."
+  },
+  {
+    "id": "montana",
+    "title": "Montaña",
+    "contenido": "Planifique su ruta con antelación y compártala con alguien de confianza antes de salir.\n\nLleve ropa adecuada por capas: base transpirable, intermedia aislante y exterior cortavientos. Hidratación constante: beba antes de tener sed, al menos 500 ml por hora de actividad.\n\nConozca los síntomas del mal de altura: dolor de cabeza, náuseas y fatiga extrema. Si aparecen, descienda inmediatamente.\n\nLleve mapa físico y brújula como respaldo al móvil, y botiquín básico con vendas, antiséptico, analgésicos y manta isotérmica.\n\nEn tormenta eléctrica: baje de la cumbre, aléjese de árboles aislados y evite objetos metálicos."
+  },
+  {
+    "id": "pantallas",
+    "title": "Ergonomía y Pantallas",
+    "contenido": "POSTURA Y DISTANCIA\n\nMantenga la pantalla a una distancia de entre 50 y 70 cm de los ojos y a la altura de los ojos o ligeramente por debajo. Mantenga la espalda recta y los pies apoyados en el suelo.\n\nREGLA 20-20-20\n\nCada 20 minutos, mire a un punto a 20 pies (6 metros) de distancia durante 20 segundos. Reduce significativamente la fatiga visual.\n\nTENSIÓN CERVICAL (TECH NECK)\n\nEvite inclinar la cabeza hacia abajo al usar el móvil. Eleve el dispositivo a la altura de los ojos. Realice estiramientos de cuello cada hora: rotaciones suaves y laterales.\n\nMUÑECAS Y MANOS\n\nSi usa teclado, mantenga las muñecas en posición neutra. Descanse las manos periódicamente y realice ejercicios de apertura y cierre de dedos.\n\nPAUSAS ACTIVAS\n\nLevántese y muévase al menos 5 minutos por cada hora de uso de pantallas. Configure recordatorios si es necesario."
+  },
+  {
+    "id": "pesca",
+    "title": "Pesca",
+    "contenido": "Lleve siempre un botiquín de primeros auxilios y agua potable suficiente para toda la jornada.\n\nUse protector solar factor 50 y renuévelo cada 2 horas. Informe a alguien de su ubicación y hora prevista de regreso.\n\nTenga cuidado con anzuelos y cuchillos: use pinzas para desanzolar y guantes de protección.\n\nSi pesca en barca, use chaleco salvavidas homologado en todo momento. Revise el pronóstico meteorológico antes de salir."
+  },
+  {
+    "id": "playa",
+    "title": "Playa y Agua",
+    "contenido": "Respete siempre las banderas de aviso: verde (condiciones seguras), amarilla (precaución), roja (prohibido bañarse).\n\nNunca se bañe solo ni en zonas no vigiladas. Evite el sol entre las 12h y las 16h.\n\nAplique protector solar resistente al agua factor 50+ cada 2 horas.\n\nEn caso de corriente de resaca: no luche contra ella, nade en paralelo a la orilla hasta salir de la corriente.\n\nVigile a los niños en todo momento: el ahogamiento puede ocurrir en silencio y en muy poca agua.\n\nNunca se tire de cabeza en aguas desconocidas. Ante un ahogamiento: llame al 112 y lance un objeto flotante al afectado sin entrar al agua si no es socorrista."
+  },
+  {
+    "id": "turismo",
+    "title": "Turismo",
+    "contenido": "Antes de viajar: investigue los servicios médicos del destino y contrate un seguro de viaje con cobertura médica.\n\nConsulte las vacunas recomendadas según el país de destino con antelación suficiente.\n\nLleve medicamentos habituales con receta en el equipaje de mano, nunca en la maleta facturada.\n\nEn destinos tropicales: beba solo agua embotellada o hervida, evite hielo de origen dudoso y frutas sin pelar.\n\nLleve una copia de su documentación en la nube y anote los números de emergencia locales y la dirección de la embajada española."
+  }
+]
