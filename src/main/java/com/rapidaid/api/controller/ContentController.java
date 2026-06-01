@@ -5,8 +5,8 @@ import com.rapidaid.api.model.TipResponse;
 import com.rapidaid.api.service.ContentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -27,5 +27,10 @@ public class ContentController {
     @GetMapping("/tips")
     public ResponseEntity<List<TipResponse>> getTips() {
         return ResponseEntity.ok(contentService.getTips());
+    }
+
+    @GetMapping("/version")
+    public ResponseEntity<Map<String, Integer>> getVersion() {
+        return ResponseEntity.ok(Map.of("version", contentService.getVersion()));
     }
 }

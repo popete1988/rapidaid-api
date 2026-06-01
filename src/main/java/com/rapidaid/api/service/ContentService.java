@@ -7,10 +7,10 @@ import com.rapidaid.api.model.TipResponse;
 import jakarta.annotation.PostConstruct;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
-
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 
 @Service
@@ -20,6 +20,7 @@ public class ContentService {
 
     private List<FirstAidResponse> firstAidList = new ArrayList<>();
     private List<TipResponse> tipList = new ArrayList<>();
+    private int contentVersion = 1;
 
     @PostConstruct
     public void loadContent() {
@@ -38,8 +39,17 @@ public class ContentService {
         } catch (Exception e) {
             log.severe("Failed to load tips.json: " + e.getMessage());
         }
+        try {
+            InputStream v = new ClassPathResource("version.json").getInputStream();
+            Map<String, Object> vData = mapper.readValue(v, new TypeReference<>() {});
+            contentVersion = (Integer) vData.getOrDefault("version", 1);
+            log.info("Content version: " + contentVersion);
+        } catch (Exception e) {
+            log.warning("Failed to load version.json, defaulting to version 1");
+        }
     }
 
     public List<FirstAidResponse> getFirstAid() { return firstAidList; }
     public List<TipResponse> getTips() { return tipList; }
+    public int getVersion() { return contentVersion; }
 }

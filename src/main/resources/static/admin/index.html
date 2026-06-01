@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RapidAid Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f0f4f8; }
+    .navbar { background: #1565C0; }
+    .nav-link { color: rgba(255,255,255,0.8) !important; cursor: pointer; }
+    .nav-link.active { color: #fff !important; border-bottom: 3px solid #fff; }
+    .card { border: none; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .login-card { max-width: 400px; margin: 100px auto; }
+    .tab-content { padding-top: 24px; }
+    .category-card { border-left: 4px solid #1565C0; margin-bottom: 16px; }
+    .subtype-row { background: #f8f9fa; border-radius: 8px; padding: 12px; margin-bottom: 8px; }
+    .tip-card { margin-bottom: 12px; }
+    .badge-active { background: #198754; }
+    .badge-disabled { background: #dc3545; }
+    .btn-icon { width: 32px; height: 32px; padding: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; }
+    .spinner-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.7); display: flex; align-items: center; justify-content: center; z-index: 9999; }
+    #loginScreen { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+    .alert-saving { position: fixed; bottom: 24px; right: 24px; z-index: 1000; min-width: 300px; }
+    textarea { font-family: monospace; font-size: 13px; }
+  </style>
+</head>
+<body>
+
+<!-- Spinner -->
+<div id="spinner" class="spinner-overlay">
+  <div class="spinner-border text-primary" role="status"></div>
+</div>
+
+<!-- Login -->
+<div id="loginScreen" style="display:none">
+  <div class="card login-card p-4 text-center">
+    <h2 class="mb-2">🏥 RapidAid Admin</h2>
+    <p class="text-muted mb-4">Acceso exclusivo para administradores</p>
+    <button id="btnGoogle" class="btn btn-outline-dark btn-lg w-100">
+      <img src="https://www.google.com/favicon.ico" width="20" class="me-2">Acceder con Google
+    </button>
+    <div id="loginError" class="alert alert-danger mt-3" style="display:none"></div>
+  </div>
+</div>
+
+<!-- Dashboard -->
+<div id="dashboard" style="display:none">
+  <nav class="navbar px-4 py-2 d-flex align-items-center justify-content-between">
+    <span class="text-white fw-bold fs-5">🏥 RapidAid Admin</span>
+    <div class="d-flex gap-3 align-items-center">
+      <a class="nav-link active" onclick="showTab('usuarios')">👥 Usuarios</a>
+      <a class="nav-link" onclick="showTab('firstaid')">🩺 Primeros Auxilios</a>
+      <a class="nav-link" onclick="showTab('tips')">💡 Consejos</a>
+      <a class="nav-link" onclick="showTab('settings')">⚙️ Configuración</a>
+      <button class="btn btn-sm btn-outline-light" onclick="signOut()">Salir</button>
+    </div>
+  </nav>
+
+  <div class="container-fluid px-4" style="max-width:1100px">
+
+    <!-- TAB USUARIOS -->
+    <div id="tabUsuarios" class="tab-content">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="mb-0">Usuarios registrados</h4>
+        <button class="btn btn-primary btn-sm" onclick="loadUsers()">🔄 Actualizar</button>
+      </div>
+      <div class="card p-0">
+        <div class="table-responsive">
+          <table class="table table-hover mb-0" id="usersTable">
+            <thead class="table-light">
+              <tr>
+                <th>Email</th><th>Nombre</th><th>Estado</th><th>Registro</th><th>Último acceso</th><th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="usersBody">
+              <tr><td colspan="6" class="text-center text-muted py-4">Cargando...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB PRIMEROS AUXILIOS -->
+    <div id="tabFirstAid" class="tab-content" style="display:none">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="mb-0">Primeros Auxilios</h4>
+        <div class="d-flex gap-2">
+          <button class="btn btn-outline-secondary btn-sm" onclick="loadFirstAid()">🔄 Recargar</button>
+          <button class="btn btn-success btn-sm" onclick="saveFirstAid()">💾 Guardar y publicar</button>
+          <button class="btn btn-primary btn-sm" onclick="addCategory()">+ Categoría</button>
+        </div>
+      </div>
+      <div id="firstAidEditor"></div>
+    </div>
+
+    <!-- TAB CONSEJOS -->
+    <div id="tabTips" class="tab-content" style="display:none">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="mb-0">Consejos y Recomendaciones</h4>
+        <div class="d-flex gap-2">
+          <button class="btn btn-outline-secondary btn-sm" onclick="loadTips()">🔄 Recargar</button>
+          <button class="btn btn-success btn-sm" onclick="saveTips()">💾 Guardar y publicar</button>
+          <button class="btn btn-primary btn-sm" onclick="addTip()">+ Consejo</button>
+        </div>
+      </div>
+      <div id="tipsEditor"></div>
+    </div>
+
+    <!-- TAB CONFIGURACION -->
+    <div id="tabSettings" class="tab-content" style="display:none">
+      <h4 class="mb-3">Configuración</h4>
+      <div class="card p-4" style="max-width:600px">
+        <div class="mb-3">
+          <label class="form-label fw-bold">GitHub Personal Access Token</label>
+          <input type="password" id="cfgGithubPat" class="form-control" placeholder="ghp_...">
+          <small class="text-muted">Necesario para editar contenido. Permisos: repo</small>
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-bold">Admin API Key</label>
+          <input type="password" id="cfgAdminKey" class="form-control" placeholder="Clave secreta configurada en Render">
+          <small class="text-muted">Necesaria para gestionar usuarios. Configúrala en Render → Environment → ADMIN_API_KEY</small>
+        </div>
+        <button class="btn btn-primary w-100" onclick="saveSettings()">Guardar configuración</button>
+        <div id="settingsSaved" class="alert alert-success mt-3" style="display:none">✓ Configuración guardada</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Toast notificación -->
+<div id="toast" class="alert-saving" style="display:none"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+<script>
+
+// ── Configuración ────────────────────────────────────────
+const firebaseConfig = {
+  apiKey: "AIzaSyAVEx1HmyMVjZCvwbqH4LJgdIJEFFrPtBQ",
+  authDomain: "rapidaid-31231.firebaseapp.com",
+  projectId: "rapidaid-31231",
+  storageBucket: "rapidaid-31231.firebasestorage.app",
+  messagingSenderId: "115145999561",
+  appId: "1:115145999561:web:b300e6e9a821d752e07918"
+};
+const ADMIN_EMAIL   = "popete88@gmail.com";
+const GITHUB_OWNER  = "popete1988";
+const GITHUB_REPO   = "rapidaid-api";
+const API_BASE      = "https://rapidaid-api.onrender.com";
+
+// ── Estado global ────────────────────────────────────────
+let firstAidData = [], firstAidSha = "";
+let tipsData = [], tipsSha = "";
+
+// ── Firebase Auth ────────────────────────────────────────
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+
+auth.onAuthStateChanged(user => {
+  document.getElementById("spinner").style.display = "none";
+  if (user && user.email === ADMIN_EMAIL) {
+    document.getElementById("loginScreen").style.display = "none";
+    document.getElementById("dashboard").style.display = "block";
+    loadUsers();
+    loadFirstAid();
+    loadTips();
+    loadSettings();
+  } else {
+    if (user) { auth.signOut(); showLoginError("Solo el administrador puede acceder."); }
+    document.getElementById("loginScreen").style.display = "flex";
+    document.getElementById("dashboard").style.display = "none";
+  }
+});
+
+document.getElementById("btnGoogle").onclick = () => {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  provider.setCustomParameters({ login_hint: ADMIN_EMAIL });
+  auth.signInWithPopup(provider).catch(e => showLoginError(e.message));
+};
+
+function signOut() { auth.signOut(); }
+
+function showLoginError(msg) {
+  const el = document.getElementById("loginError");
+  el.textContent = msg; el.style.display = "block";
+}
+
+// ── Navegación ───────────────────────────────────────────
+function showTab(tab) {
+  ["tabUsuarios","tabFirstAid","tabTips","tabSettings"].forEach(t =>
+    document.getElementById(t).style.display = "none");
+  document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
+  const map = {usuarios:"tabUsuarios",firstaid:"tabFirstAid",tips:"tabTips",settings:"tabSettings"};
+  document.getElementById(map[tab]).style.display = "block";
+  event.target.classList.add("active");
+}
+
+// ── Settings ─────────────────────────────────────────────
+function loadSettings() {
+  document.getElementById("cfgGithubPat").value = localStorage.getItem("ra_github_pat") || "";
+  document.getElementById("cfgAdminKey").value  = localStorage.getItem("ra_admin_key")  || "";
+}
+function saveSettings() {
+  localStorage.setItem("ra_github_pat", document.getElementById("cfgGithubPat").value.trim());
+  localStorage.setItem("ra_admin_key",  document.getElementById("cfgAdminKey").value.trim());
+  document.getElementById("settingsSaved").style.display = "block";
+  setTimeout(() => document.getElementById("settingsSaved").style.display = "none", 2000);
+}
+function getSettings() {
+  return { pat: localStorage.getItem("ra_github_pat") || "", key: localStorage.getItem("ra_admin_key") || "" };
+}
+
+// ── Toast ────────────────────────────────────────────────
+function showToast(msg, type="success") {
+  const t = document.getElementById("toast");
+  t.className = `alert-saving alert alert-${type}`;
+  t.textContent = msg; t.style.display = "block";
+  setTimeout(() => t.style.display = "none", 4000);
+}
+
+// ── GitHub API ───────────────────────────────────────────
+async function githubGet(path) {
+  const { pat } = getSettings();
+  const r = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`,
+    { headers: { Authorization: `token ${pat}`, Accept: "application/vnd.github.v3+json" }});
+  if (!r.ok) throw new Error("GitHub error " + r.status + ". Revisa el PAT en Configuración.");
+  const d = await r.json();
+  return { content: JSON.parse(decodeURIComponent(escape(atob(d.content.replace(/\n/g,""))))), sha: d.sha };
+}
+
+async function githubPut(path, content, sha, message) {
+  const { pat } = getSettings();
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2))));
+  const r = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`,
+    { method: "PUT",
+      headers: { Authorization: `token ${pat}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" },
+      body: JSON.stringify({ message, content: encoded, sha }) });
+  if (!r.ok) throw new Error("GitHub write error " + r.status);
+  return r.json();
+}
+
+async function incrementVersion() {
+  const path = "src/main/resources/version.json";
+  const { content, sha } = await githubGet(path);
+  const newVer = { version: (content.version || 1) + 1 };
+  await githubPut(path, newVer, sha, `Dashboard: versión ${newVer.version}`);
+  showToast(`✓ Publicado. Versión ${newVer.version}. Render redesplegará en ~2 minutos.`);
+}
+
+// ── Admin API ─────────────────────────────────────────────
+async function adminFetch(endpoint, method="GET") {
+  const { key } = getSettings();
+  const r = await fetch(`${API_BASE}${endpoint}`, { method, headers: { "X-Admin-Key": key }});
+  if (!r.ok) {
+    const err = await r.json().catch(() => ({}));
+    throw new Error(err.error || "Error " + r.status + ". Revisa la Admin API Key en Configuración.");
+  }
+  return r.json();
+}
+
+// ── USUARIOS ──────────────────────────────────────────────
+async function loadUsers() {
+  const tbody = document.getElementById("usersBody");
+  tbody.innerHTML = '<tr><td colspan="6" class="text-center text-muted py-3">Cargando...</td></tr>';
+  try {
+    const users = await adminFetch("/api/v1/admin/users");
+    if (!users.length) {
+      tbody.innerHTML = '<tr><td colspan="6" class="text-center text-muted py-3">No hay usuarios registrados.</td></tr>';
+      return;
+    }
+    tbody.innerHTML = users.map(u => `
+      <tr>
+        <td>${u.email}</td>
+        <td>${u.displayName || "-"}</td>
+        <td><span class="badge ${u.disabled ? "badge-disabled" : "badge-active"}">${u.disabled ? "Deshabilitado" : "Activo"}</span></td>
+        <td>${u.createdAt ? new Date(u.createdAt).toLocaleDateString("es") : "-"}</td>
+        <td>${u.lastSignIn ? new Date(u.lastSignIn).toLocaleDateString("es") : "-"}</td>
+        <td>
+          <button class="btn btn-sm ${u.disabled ? "btn-success" : "btn-warning"} me-1"
+            onclick="toggleUser('${u.uid}',${u.disabled})">${u.disabled ? "Activar" : "Deshabilitar"}</button>
+          <button class="btn btn-sm btn-danger" onclick="confirmDeleteUser('${u.uid}','${u.email}')">Eliminar</button>
+        </td>
+      </tr>`).join("");
+  } catch(e) {
+    tbody.innerHTML = `<tr><td colspan="6" class="text-center text-danger py-3">${e.message}</td></tr>`;
+  }
+}
+
+async function toggleUser(uid, isDisabled) {
+  try {
+    await adminFetch(`/api/v1/admin/users/${uid}/${isDisabled ? "enable" : "disable"}`, "POST");
+    showToast(isDisabled ? "✓ Usuario activado" : "✓ Usuario deshabilitado");
+    loadUsers();
+  } catch(e) { showToast(e.message, "danger"); }
+}
+
+function confirmDeleteUser(uid, email) {
+  if (!confirm(`¿Eliminar permanentemente al usuario ${email}?`)) return;
+  adminFetch(`/api/v1/admin/users/${uid}`, "DELETE")
+    .then(() => { showToast("✓ Usuario eliminado"); loadUsers(); })
+    .catch(e => showToast(e.message, "danger"));
+}
+
+// ── PRIMEROS AUXILIOS ─────────────────────────────────────
+async function loadFirstAid() {
+  document.getElementById("firstAidEditor").innerHTML = '<p class="text-muted">Cargando...</p>';
+  try {
+    const { content, sha } = await githubGet("src/main/resources/firstaid.json");
+    firstAidData = content; firstAidSha = sha;
+    renderFirstAid();
+  } catch(e) {
+    document.getElementById("firstAidEditor").innerHTML = `<div class="alert alert-danger">${e.message}</div>`;
+  }
+}
+
+function renderFirstAid() {
+  const el = document.getElementById("firstAidEditor");
+  el.innerHTML = firstAidData.map((cat, ci) => `
+    <div class="card category-card p-3 mb-3">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <strong>Categoría ${ci+1}</strong>
+        <button class="btn btn-sm btn-outline-danger" onclick="removeCategory(${ci})">✕ Eliminar categoría</button>
+      </div>
+      <div class="row g-2 mb-3">
+        <div class="col-md-4">
+          <label class="form-label small text-muted">ID</label>
+          <input class="form-control form-control-sm" value="${cat.id}" onchange="firstAidData[${ci}].id=this.value">
+        </div>
+        <div class="col-md-5">
+          <label class="form-label small text-muted">Título</label>
+          <input class="form-control form-control-sm" value="${cat.title}" onchange="firstAidData[${ci}].title=this.value">
+        </div>
+        <div class="col-md-3">
+          <label class="form-label small text-muted">Color</label>
+          <select class="form-select form-select-sm" onchange="firstAidData[${ci}].color=this.value">
+            ${["red","blue","green","purple","orange","teal","pink","amber","indigo"].map(c =>
+              `<option value="${c}" ${cat.color===c?"selected":""}>${c}</option>`).join("")}
+          </select>
+        </div>
+      </div>
+      <div class="mb-2"><strong class="small">Subtipos</strong></div>
+      ${cat.subtypes.map((s, si) => `
+        <div class="subtype-row mb-2">
+          <div class="d-flex justify-content-between mb-1">
+            <span class="small text-muted">Subtipo ${si+1}</span>
+            <button class="btn btn-sm btn-outline-danger btn-icon" onclick="removeSubtype(${ci},${si})">✕</button>
+          </div>
+          <input class="form-control form-control-sm mb-1" placeholder="Nombre" value="${s.name}"
+            onchange="firstAidData[${ci}].subtypes[${si}].name=this.value">
+          <textarea class="form-control form-control-sm mb-1" rows="2" placeholder="Síntomas"
+            onchange="firstAidData[${ci}].subtypes[${si}].sintomas=this.value">${s.sintomas}</textarea>
+          <textarea class="form-control form-control-sm" rows="2" placeholder="Tratamiento"
+            onchange="firstAidData[${ci}].subtypes[${si}].tratamiento=this.value">${s.tratamiento}</textarea>
+        </div>`).join("")}
+      <button class="btn btn-sm btn-outline-primary mt-1" onclick="addSubtype(${ci})">+ Subtipo</button>
+    </div>`).join("");
+}
+
+function addCategory() {
+  firstAidData.push({ id: "nueva_categoria", title: "Nueva categoría", color: "blue", subtypes: [] });
+  renderFirstAid();
+}
+function removeCategory(ci) {
+  if (!confirm("¿Eliminar esta categoría?")) return;
+  firstAidData.splice(ci, 1); renderFirstAid();
+}
+function addSubtype(ci) {
+  firstAidData[ci].subtypes.push({ name: "", sintomas: "", tratamiento: "" });
+  renderFirstAid();
+}
+function removeSubtype(ci, si) {
+  firstAidData[ci].subtypes.splice(si, 1); renderFirstAid();
+}
+
+async function saveFirstAid() {
+  try {
+    showToast("Guardando...", "info");
+    await githubPut("src/main/resources/firstaid.json", firstAidData, firstAidSha,
+      "Dashboard: actualizar primeros auxilios");
+    await incrementVersion();
+    const { sha } = await githubGet("src/main/resources/firstaid.json");
+    firstAidSha = sha;
+  } catch(e) { showToast(e.message, "danger"); }
+}
+
+// ── CONSEJOS ──────────────────────────────────────────────
+async function loadTips() {
+  document.getElementById("tipsEditor").innerHTML = '<p class="text-muted">Cargando...</p>';
+  try {
+    const { content, sha } = await githubGet("src/main/resources/tips.json");
+    tipsData = content; tipsSha = sha;
+    renderTips();
+  } catch(e) {
+    document.getElementById("tipsEditor").innerHTML = `<div class="alert alert-danger">${e.message}</div>`;
+  }
+}
+
+function renderTips() {
+  const el = document.getElementById("tipsEditor");
+  el.innerHTML = tipsData.map((tip, ti) => `
+    <div class="card tip-card p-3">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <strong>${tip.title || "Sin título"}</strong>
+        <button class="btn btn-sm btn-outline-danger" onclick="removeTip(${ti})">✕ Eliminar</button>
+      </div>
+      <div class="row g-2 mb-2">
+        <div class="col-md-4">
+          <label class="form-label small text-muted">ID</label>
+          <input class="form-control form-control-sm" value="${tip.id}"
+            onchange="tipsData[${ti}].id=this.value">
+        </div>
+        <div class="col-md-8">
+          <label class="form-label small text-muted">Título</label>
+          <input class="form-control form-control-sm" value="${tip.title}"
+            onchange="tipsData[${ti}].title=this.value">
+        </div>
+      </div>
+      <label class="form-label small text-muted">Contenido (separa párrafos con línea en blanco)</label>
+      <textarea class="form-control" rows="8"
+        onchange="tipsData[${ti}].contenido=this.value">${tip.contenido}</textarea>
+    </div>`).join("");
+}
+
+function addTip() {
+  tipsData.push({ id: "nuevo_consejo", title: "Nuevo consejo", contenido: "" });
+  renderTips();
+}
+function removeTip(ti) {
+  if (!confirm("¿Eliminar este consejo?")) return;
+  tipsData.splice(ti, 1); renderTips();
+}
+
+async function saveTips() {
+  try {
+    showToast("Guardando...", "info");
+    await githubPut("src/main/resources/tips.json", tipsData, tipsSha,
+      "Dashboard: actualizar consejos");
+    await incrementVersion();
+    const { sha } = await githubGet("src/main/resources/tips.json");
+    tipsSha = sha;
+  } catch(e) { showToast(e.message, "danger"); }
+}
+
+</script>
+</body>
+</html>
