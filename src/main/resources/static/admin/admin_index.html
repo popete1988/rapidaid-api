@@ -23,6 +23,10 @@
     #loginScreen { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
     .alert-saving { position: fixed; bottom: 24px; right: 24px; z-index: 1000; min-width: 300px; }
     textarea { font-family: monospace; font-size: 13px; }
+    .img-preview { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; border: 2px solid #dee2e6; }
+    .img-preview-placeholder { width: 80px; height: 80px; border-radius: 8px; border: 2px dashed #dee2e6; background: #f8f9fa; display: flex; align-items: center; justify-content: center; color: #adb5bd; font-size: 11px; text-align: center; cursor: pointer; }
+    .img-upload-area { display: flex; align-items: center; gap: 10px; }
+    .uploading-badge { font-size: 11px; color: #0d6efd; }
   </style>
 </head>
 <body>
@@ -69,9 +73,7 @@
         <div class="table-responsive">
           <table class="table table-hover mb-0" id="usersTable">
             <thead class="table-light">
-              <tr>
-                <th>Email</th><th>Nombre</th><th>Estado</th><th>Registro</th><th>Último acceso</th><th>Acciones</th>
-              </tr>
+              <tr><th>Email</th><th>Nombre</th><th>Estado</th><th>Registro</th><th>Último acceso</th><th>Acciones</th></tr>
             </thead>
             <tbody id="usersBody">
               <tr><td colspan="6" class="text-center text-muted py-4">Cargando...</td></tr>
@@ -146,10 +148,12 @@ const firebaseConfig = {
   messagingSenderId: "115145999561",
   appId: "1:115145999561:web:b300e6e9a821d752e07918"
 };
-const ADMIN_EMAIL   = "popete88@gmail.com";
-const GITHUB_OWNER  = "popete1988";
-const GITHUB_REPO   = "rapidaid-api";
-const API_BASE      = "https://rapidaid-api.onrender.com";
+const ADMIN_EMAIL  = "popete88@gmail.com";
+const GITHUB_OWNER = "popete1988";
+const GITHUB_REPO  = "rapidaid-api";
+const API_BASE     = "https://rapidaid-api.onrender.com";
+const IMAGES_PATH  = "src/main/resources/static/images";
+const IMAGES_URL   = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/main/${IMAGES_PATH}`;
 
 // ── Estado global ────────────────────────────────────────
 let firstAidData = [], firstAidSha = "";
@@ -164,10 +168,7 @@ auth.onAuthStateChanged(user => {
   if (user && user.email === ADMIN_EMAIL) {
     document.getElementById("loginScreen").style.display = "none";
     document.getElementById("dashboard").style.display = "block";
-    loadUsers();
-    loadFirstAid();
-    loadTips();
-    loadSettings();
+    loadUsers(); loadFirstAid(); loadTips(); loadSettings();
   } else {
     if (user) { auth.signOut(); showLoginError("Solo el administrador puede acceder."); }
     document.getElementById("loginScreen").style.display = "flex";
@@ -182,7 +183,6 @@ document.getElementById("btnGoogle").onclick = () => {
 };
 
 function signOut() { auth.signOut(); }
-
 function showLoginError(msg) {
   const el = document.getElementById("loginError");
   el.textContent = msg; el.style.display = "block";
@@ -240,6 +240,40 @@ async function githubPut(path, content, sha, message) {
       body: JSON.stringify({ message, content: encoded, sha }) });
   if (!r.ok) throw new Error("GitHub write error " + r.status);
   return r.json();
+}
+
+// Sube una imagen al repo y devuelve la URL pública raw
+async function uploadImageToGitHub(file, folder) {
+  const { pat } = getSettings();
+  const safeName = `${Date.now()}_${file.name.replace(/[^a-zA-Z0-9._-]/g, "_")}`;
+  const path = `${IMAGES_PATH}/${folder}/${safeName}`;
+
+  // Convertir a base64
+  const base64 = await new Promise((res, rej) => {
+    const reader = new FileReader();
+    reader.onload = () => res(reader.result.split(",")[1]);
+    reader.onerror = rej;
+    reader.readAsDataURL(file);
+  });
+
+  // Verificar si ya existe (para obtener sha si hace falta)
+  let existingSha = "";
+  try {
+    const check = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`,
+      { headers: { Authorization: `token ${pat}`, Accept: "application/vnd.github.v3+json" }});
+    if (check.ok) { const d = await check.json(); existingSha = d.sha; }
+  } catch {}
+
+  const body = { message: `Dashboard: imagen ${safeName}`, content: base64 };
+  if (existingSha) body.sha = existingSha;
+
+  const r = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`,
+    { method: "PUT",
+      headers: { Authorization: `token ${pat}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" },
+      body: JSON.stringify(body) });
+  if (!r.ok) throw new Error("Error al subir imagen: " + r.status);
+
+  return `${IMAGES_URL}/${folder}/${safeName}`;
 }
 
 async function incrementVersion() {
@@ -304,6 +338,14 @@ function confirmDeleteUser(uid, email) {
     .catch(e => showToast(e.message, "danger"));
 }
 
+// ── IMAGEN helper ─────────────────────────────────────────
+function imgPreviewHtml(url, inputId) {
+  if (url) {
+    return `<img src="${url}" class="img-preview" title="Imagen actual" onerror="this.style.display='none'">`;
+  }
+  return `<div class="img-preview-placeholder" onclick="document.getElementById('${inputId}').click()">📷<br>Sin imagen</div>`;
+}
+
 // ── PRIMEROS AUXILIOS ─────────────────────────────────────
 async function loadFirstAid() {
   document.getElementById("firstAidEditor").innerHTML = '<p class="text-muted">Cargando...</p>';
@@ -341,26 +383,96 @@ function renderFirstAid() {
           </select>
         </div>
       </div>
+
+      <!-- Imagen de categoría -->
+      <div class="mb-3">
+        <label class="form-label small text-muted fw-bold">🖼 Imagen de categoría</label>
+        <div class="img-upload-area">
+          ${imgPreviewHtml(cat.imageUrl, `fa_cat_img_${ci}`)}
+          <div>
+            <input type="file" id="fa_cat_img_${ci}" accept="image/*" style="display:none"
+              onchange="handleCategoryImageUpload(${ci}, this)">
+            <button class="btn btn-sm btn-outline-secondary d-block mb-1"
+              onclick="document.getElementById('fa_cat_img_${ci}').click()">
+              📷 ${cat.imageUrl ? "Cambiar imagen" : "Subir imagen"}
+            </button>
+            ${cat.imageUrl ? `<button class="btn btn-sm btn-outline-danger d-block"
+              onclick="firstAidData[${ci}].imageUrl='';renderFirstAid()">✕ Quitar</button>` : ""}
+            <span id="fa_cat_uploading_${ci}" class="uploading-badge" style="display:none">⏳ Subiendo...</span>
+          </div>
+          ${cat.imageUrl ? `<div class="flex-grow-1"><small class="text-muted text-break">${cat.imageUrl}</small></div>` : ""}
+        </div>
+      </div>
+
       <div class="mb-2"><strong class="small">Subtipos</strong></div>
       ${cat.subtypes.map((s, si) => `
         <div class="subtype-row mb-2">
-          <div class="d-flex justify-content-between mb-1">
-            <span class="small text-muted">Subtipo ${si+1}</span>
+          <div class="d-flex justify-content-between mb-2">
+            <span class="small text-muted fw-bold">Subtipo ${si+1}</span>
             <button class="btn btn-sm btn-outline-danger btn-icon" onclick="removeSubtype(${ci},${si})">✕</button>
           </div>
           <input class="form-control form-control-sm mb-1" placeholder="Nombre" value="${s.name}"
             onchange="firstAidData[${ci}].subtypes[${si}].name=this.value">
           <textarea class="form-control form-control-sm mb-1" rows="2" placeholder="Síntomas"
             onchange="firstAidData[${ci}].subtypes[${si}].sintomas=this.value">${s.sintomas}</textarea>
-          <textarea class="form-control form-control-sm" rows="2" placeholder="Tratamiento"
+          <textarea class="form-control form-control-sm mb-2" rows="2" placeholder="Tratamiento"
             onchange="firstAidData[${ci}].subtypes[${si}].tratamiento=this.value">${s.tratamiento}</textarea>
+
+          <!-- Imagen de subtipo -->
+          <div>
+            <label class="form-label small text-muted">🖼 Imagen del subtipo</label>
+            <div class="img-upload-area">
+              ${imgPreviewHtml(s.imageUrl, `fa_sub_img_${ci}_${si}`)}
+              <div>
+                <input type="file" id="fa_sub_img_${ci}_${si}" accept="image/*" style="display:none"
+                  onchange="handleSubtypeImageUpload(${ci},${si},this)">
+                <button class="btn btn-sm btn-outline-secondary d-block mb-1"
+                  onclick="document.getElementById('fa_sub_img_${ci}_${si}').click()">
+                  📷 ${s.imageUrl ? "Cambiar" : "Subir imagen"}
+                </button>
+                ${s.imageUrl ? `<button class="btn btn-sm btn-outline-danger d-block"
+                  onclick="firstAidData[${ci}].subtypes[${si}].imageUrl='';renderFirstAid()">✕ Quitar</button>` : ""}
+                <span id="fa_sub_uploading_${ci}_${si}" class="uploading-badge" style="display:none">⏳ Subiendo...</span>
+              </div>
+            </div>
+          </div>
         </div>`).join("")}
       <button class="btn btn-sm btn-outline-primary mt-1" onclick="addSubtype(${ci})">+ Subtipo</button>
     </div>`).join("");
 }
 
+async function handleCategoryImageUpload(ci, input) {
+  const file = input.files[0]; if (!file) return;
+  const badge = document.getElementById(`fa_cat_uploading_${ci}`);
+  badge.style.display = "inline";
+  try {
+    const url = await uploadImageToGitHub(file, "firstaid");
+    firstAidData[ci].imageUrl = url;
+    renderFirstAid();
+    showToast("✓ Imagen subida correctamente");
+  } catch(e) {
+    showToast(e.message, "danger");
+    badge.style.display = "none";
+  }
+}
+
+async function handleSubtypeImageUpload(ci, si, input) {
+  const file = input.files[0]; if (!file) return;
+  const badge = document.getElementById(`fa_sub_uploading_${ci}_${si}`);
+  badge.style.display = "inline";
+  try {
+    const url = await uploadImageToGitHub(file, "firstaid");
+    firstAidData[ci].subtypes[si].imageUrl = url;
+    renderFirstAid();
+    showToast("✓ Imagen subida correctamente");
+  } catch(e) {
+    showToast(e.message, "danger");
+    badge.style.display = "none";
+  }
+}
+
 function addCategory() {
-  firstAidData.push({ id: "nueva_categoria", title: "Nueva categoría", color: "blue", subtypes: [] });
+  firstAidData.push({ id: "nueva_categoria", title: "Nueva categoría", color: "blue", imageUrl: "", subtypes: [] });
   renderFirstAid();
 }
 function removeCategory(ci) {
@@ -368,7 +480,7 @@ function removeCategory(ci) {
   firstAidData.splice(ci, 1); renderFirstAid();
 }
 function addSubtype(ci) {
-  firstAidData[ci].subtypes.push({ name: "", sintomas: "", tratamiento: "" });
+  firstAidData[ci].subtypes.push({ name: "", sintomas: "", tratamiento: "", imageUrl: "" });
   renderFirstAid();
 }
 function removeSubtype(ci, si) {
@@ -418,14 +530,50 @@ function renderTips() {
             onchange="tipsData[${ti}].title=this.value">
         </div>
       </div>
+
+      <!-- Imagen del consejo -->
+      <div class="mb-2">
+        <label class="form-label small text-muted fw-bold">🖼 Imagen del consejo</label>
+        <div class="img-upload-area">
+          ${imgPreviewHtml(tip.imageUrl, `tip_img_${ti}`)}
+          <div>
+            <input type="file" id="tip_img_${ti}" accept="image/*" style="display:none"
+              onchange="handleTipImageUpload(${ti}, this)">
+            <button class="btn btn-sm btn-outline-secondary d-block mb-1"
+              onclick="document.getElementById('tip_img_${ti}').click()">
+              📷 ${tip.imageUrl ? "Cambiar imagen" : "Subir imagen"}
+            </button>
+            ${tip.imageUrl ? `<button class="btn btn-sm btn-outline-danger d-block"
+              onclick="tipsData[${ti}].imageUrl='';renderTips()">✕ Quitar</button>` : ""}
+            <span id="tip_uploading_${ti}" class="uploading-badge" style="display:none">⏳ Subiendo...</span>
+          </div>
+          ${tip.imageUrl ? `<div class="flex-grow-1"><small class="text-muted text-break">${tip.imageUrl}</small></div>` : ""}
+        </div>
+      </div>
+
       <label class="form-label small text-muted">Contenido (separa párrafos con línea en blanco)</label>
       <textarea class="form-control" rows="8"
         onchange="tipsData[${ti}].contenido=this.value">${tip.contenido}</textarea>
     </div>`).join("");
 }
 
+async function handleTipImageUpload(ti, input) {
+  const file = input.files[0]; if (!file) return;
+  const badge = document.getElementById(`tip_uploading_${ti}`);
+  badge.style.display = "inline";
+  try {
+    const url = await uploadImageToGitHub(file, "tips");
+    tipsData[ti].imageUrl = url;
+    renderTips();
+    showToast("✓ Imagen subida correctamente");
+  } catch(e) {
+    showToast(e.message, "danger");
+    badge.style.display = "none";
+  }
+}
+
 function addTip() {
-  tipsData.push({ id: "nuevo_consejo", title: "Nuevo consejo", contenido: "" });
+  tipsData.push({ id: "nuevo_consejo", title: "Nuevo consejo", imageUrl: "", contenido: "" });
   renderTips();
 }
 function removeTip(ti) {
