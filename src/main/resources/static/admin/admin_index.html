@@ -472,7 +472,7 @@ async function handleSubtypeImageUpload(ci, si, input) {
 }
 
 function addCategory() {
-  firstAidData.push({ id: "nueva_categoria", title: "Nueva categoría", color: "blue", imageUrl: "", subtypes: [] });
+  firstAidData.unshift({ id: "nueva_categoria", title: "Nueva categoría", color: "blue", imageUrl: "", subtypes: [] });
   renderFirstAid();
 }
 function removeCategory(ci) {
@@ -573,7 +573,7 @@ async function handleTipImageUpload(ti, input) {
 }
 
 function addTip() {
-  tipsData.push({ id: "nuevo_consejo", title: "Nuevo consejo", imageUrl: "", contenido: "" });
+  tipsData.unshift({ id: "nuevo_consejo", title: "Nuevo consejo", imageUrl: "", contenido: "" });
   renderTips();
 }
 function removeTip(ti) {
