@@ -6,6 +6,7 @@ public class FirstAidResponse {
     private String id;
     private String title;
     private String color;
+    private String imageUrl;
     private List<SubtypeResponse> subtypes;
 
     public FirstAidResponse() {}
@@ -15,6 +16,8 @@ public class FirstAidResponse {
     public void setTitle(String title) { this.title = title; }
     public String getColor() { return color; }
     public void setColor(String color) { this.color = color; }
+    public String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
     public List<SubtypeResponse> getSubtypes() { return subtypes; }
     public void setSubtypes(List<SubtypeResponse> subtypes) { this.subtypes = subtypes; }
 }

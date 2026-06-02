@@ -4,6 +4,7 @@ public class TipResponse {
     private String id;
     private String title;
     private String contenido;
+    private String imageUrl;
 
     public TipResponse() {}
     public String getId() { return id; }
@@ -12,4 +13,6 @@ public class TipResponse {
     public void setTitle(String title) { this.title = title; }
     public String getContenido() { return contenido; }
     public void setContenido(String contenido) { this.contenido = contenido; }
+    public String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 }
