@@ -48,5 +48,11 @@
     "id": "turismo",
     "title": "Turismo",
     "contenido": "Antes de viajar: investigue los servicios médicos del destino y contrate un seguro de viaje con cobertura médica.\n\nConsulte las vacunas recomendadas según el país de destino con antelación suficiente.\n\nLleve medicamentos habituales con receta en el equipaje de mano, nunca en la maleta facturada.\n\nEn destinos tropicales: beba solo agua embotellada o hervida, evite hielo de origen dudoso y frutas sin pelar.\n\nLleve una copia de su documentación en la nube y anote los números de emergencia locales y la dirección de la embajada española."
+  },
+  {
+    "id": "Buceo",
+    "title": "Buceo",
+    "imageUrl": "https://raw.githubusercontent.com/popete1988/rapidaid-api/main/src/main/resources/static/images/tips/1780411946910_Buceo.png",
+    "contenido": "Buceo con snorkle:\n\nBuceo con bombona:"
   }
 ]
