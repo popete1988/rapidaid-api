@@ -37,22 +37,16 @@ public class GeminiService {
         this.restTemplate = new RestTemplate(factory);
     }
 
-    /**
-     * Calls Gemini API to get structured disease information in Spanish.
-     * Returns null if the call fails or the disease is not recognized.
-     */
     public DiseaseResponse searchWithAI(String query) {
         if (apiKey == null || apiKey.isBlank()) {
-            log.warning("GEMINI_API_KEY not configured — skipping AI search");
+            log.warning("GEMINI_API_KEY no configurada — búsqueda IA desactivada");
             return null;
         }
-        log.info("GeminiService v16 | Calling Gemini AI for: " + query + " | key starts with: " + 
-            (apiKey.length() > 8 ? apiKey.substring(0, 8) + "..." : "TOO_SHORT"));
+        log.info("Consultando Gemini AI para: " + query);
 
         String prompt = "Enfermedad: " + query + ". Responde SOLO con JSON: {\"name\":\"nombre\",\"description\":\"descripcion breve\",\"symptoms\":\"sintomas\",\"treatment\":\"tratamiento\"}";
 
         try {
-            log.info("Sending request to Gemini API...");
             Map<String, Object> requestBody = Map.of(
                 "contents", List.of(
                     Map.of("parts", List.of(
@@ -69,27 +63,24 @@ public class GeminiService {
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_JSON);
 
-            // Use postForObject to get complete response body
             String fullResponseBody = restTemplate.postForObject(
                 GEMINI_URL + apiKey,
                 new HttpEntity<>(requestBody, headers),
                 String.class
             );
 
-            log.info("Gemini response received, body length: " + (fullResponseBody != null ? fullResponseBody.length() : 0));
             if (fullResponseBody != null) {
-                log.info("Gemini response received, parsing...");
                 return parseGeminiResponse(fullResponseBody, query);
             } else {
-                log.warning("Gemini returned null body");
+                log.warning("Gemini devolvió respuesta vacía");
             }
 
         } catch (org.springframework.web.client.HttpClientErrorException e) {
-            log.warning("Gemini HTTP error: " + e.getStatusCode() + " | " + e.getResponseBodyAsString());
+            log.warning("Gemini HTTP error: " + e.getStatusCode());
         } catch (org.springframework.web.client.ResourceAccessException e) {
-            log.warning("Gemini timeout/connection error: " + e.getMessage());
+            log.warning("Gemini timeout/conexión: " + e.getMessage());
         } catch (Exception e) {
-            log.warning("Gemini unexpected error: " + e.getClass().getSimpleName() + ": " + e.getMessage());
+            log.warning("Gemini error inesperado: " + e.getClass().getSimpleName());
         }
 
         return null;
@@ -103,32 +94,18 @@ public class GeminiService {
                 .path("content")
                 .path("parts").get(0)
                 .path("text").asText();
-            
-            log.info("Gemini raw text: " + text.substring(0, Math.min(text.length(), 300)));
-            // Debug: print char codes around the { character
-            int bracePos = text.indexOf("{");
-            int bracePos2 = text.indexOf("\u007b"); // unicode {
-            log.info("DEBUG indexOf({)=" + bracePos + " | text.length=" + text.length() + 
-                     " | first10chars=" + text.chars().limit(20)
-                         .mapToObj(c -> String.valueOf((int)c))
-                         .collect(java.util.stream.Collectors.joining(",")));
 
-            // Remove ALL markdown formatting and extract pure JSON
-            // Strategy: find first { and last } in the entire text
             int start = text.indexOf("{");
             int end   = text.lastIndexOf("}") + 1;
-            log.info("DEBUG start=" + start + " | end=" + end + " | text.length=" + text.length() + 
-                     " | last20chars=" + text.substring(Math.max(0, text.length()-20)));
+
             if (start < 0 || end <= start) {
-                log.warning("No JSON object found in Gemini response: " + text.substring(0, Math.min(text.length(), 100)));
+                log.warning("No se encontró JSON en la respuesta de Gemini");
                 return null;
             }
 
             String jsonStr = text.substring(start, end);
-            log.info("Parsed JSON: " + jsonStr.substring(0, Math.min(jsonStr.length(), 200)));
             JsonNode data  = objectMapper.readTree(jsonStr);
 
-            // If Gemini says it's not a disease
             if (data.has("error")) return null;
 
             return new DiseaseResponse(
@@ -140,7 +117,7 @@ public class GeminiService {
             );
 
         } catch (Exception e) {
-            log.warning("Error parsing Gemini response: " + e.getMessage());
+            log.warning("Error procesando respuesta de Gemini: " + e.getMessage());
             return null;
         }
     }

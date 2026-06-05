@@ -9,7 +9,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin(origins = "*") // Allow requests from Android app
+@CrossOrigin(origins = "*")
 public class DiseaseController {
 
     private final DiseaseService diseaseService;
@@ -18,24 +18,9 @@ public class DiseaseController {
         this.diseaseService = diseaseService;
     }
 
-    /**
-     * Search diseases by name.
-     * GET /api/v1/disease?name=meningitis
-     *
-     * Returns JSON array:
-     * [
-     *   {
-     *     "name": "Meningitis",
-     *     "description": "La meningitis es...",
-     *     "symptoms": "Fiebre, dolor de cabeza...",
-     *     "treatment": "El tratamiento incluye...",
-     *     "source": "MedlinePlus NLM"
-     *   }
-     * ]
-     */
     @GetMapping("/disease")
     public ResponseEntity<?> searchDisease(@RequestParam(name = "name") String name) {
-        if (name == null || name.isBlank()) {
+        if (name.isBlank()) {
             return ResponseEntity.badRequest()
                     .body(Map.of("error", "El parámetro 'name' es obligatorio"));
         }
@@ -49,10 +34,7 @@ public class DiseaseController {
         return ResponseEntity.ok(results);
     }
 
-    /**
-     * Health check endpoint — Railway uses this to verify the service is running.
-     * GET /api/v1/health
-     */
+    // Health check — Render usa este endpoint para verificar que el servicio está activo
     @GetMapping("/health")
     public ResponseEntity<Map<String, String>> health() {
         return ResponseEntity.ok(Map.of(

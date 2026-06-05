@@ -10,18 +10,14 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 public class CacheConfig {
 
-    /**
-     * Cache disease results for 24 hours.
-     * This means "meningitis" searched at 10am will be cached until 10am next day.
-     * Reduces external API calls and makes the app faster for repeated searches.
-     */
+    // Caché de enfermedades: 24h de TTL, máximo 500 entradas
     @Bean
     public CacheManager cacheManager() {
         CaffeineCacheManager manager = new CaffeineCacheManager("diseases");
         manager.setCaffeine(
                 Caffeine.newBuilder()
                         .expireAfterWrite(24, TimeUnit.HOURS)
-                        .maximumSize(500) // Cache up to 500 different diseases
+                        .maximumSize(500)
         );
         return manager;
     }

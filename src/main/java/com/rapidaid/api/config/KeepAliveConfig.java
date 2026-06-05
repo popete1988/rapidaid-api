@@ -1,8 +1,10 @@
 package com.rapidaid.api.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.web.client.RestTemplate;
 import java.util.logging.Logger;
 
 @Configuration
@@ -10,13 +12,18 @@ import java.util.logging.Logger;
 public class KeepAliveConfig {
 
     private static final Logger log = Logger.getLogger(KeepAliveConfig.class.getName());
+    private final RestTemplate restTemplate = new RestTemplate();
 
-    /**
-     * Ping ourselves every 10 minutes to prevent Render free tier from sleeping.
-     * Render sleeps after 15 minutes of inactivity.
-     */
-    @Scheduled(fixedDelay = 600000) // Every 10 minutes
+    @Value("${server.port:10000}")
+    private int port;
+
+    // Ping cada 10 minutos para evitar que Render duerma el servicio
+    @Scheduled(fixedDelay = 600000)
     public void keepAlive() {
-        log.info("Keep-alive ping");
+        try {
+            restTemplate.getForObject("http://localhost:" + port + "/api/v1/health", String.class);
+        } catch (Exception e) {
+            log.warning("Keep-alive fallido: " + e.getMessage());
+        }
     }
 }
