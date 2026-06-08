@@ -1,94 +1,242 @@
 [
   {
-    "id": "atragantamiento", "title": "Atragantamiento", "color": "teal",
+    "id": "prueba",
+    "title": "Prueba",
+    "color": "amber",
+    "imageUrl": "https://raw.githubusercontent.com/popete1988/rapidaid-api/main/src/main/resources/static/images/firstaid/1780941367508_ic_enfermedades.png",
     "subtypes": [
-      { "name": "Obstrucción parcial", "sintomas": "Tos, dificultad para hablar, respiración con silbidos.", "tratamiento": "Animar a toser. No dar palmadas si puede toser. Vigilar evolución." },
-      { "name": "Obstrucción total", "sintomas": "No puede hablar, toser ni respirar. Se lleva las manos al cuello.", "tratamiento": "Maniobra de Heimlich: 5 compresiones abdominales. Si pierde conciencia, iniciar RCP." }
+      {
+        "name": "Prueba 1",
+        "sintomas": "Probando",
+        "tratamiento": "Probando",
+        "imageUrl": "https://raw.githubusercontent.com/popete1988/rapidaid-api/main/src/main/resources/static/images/firstaid/1780941399539_ic_consejos.png"
+      }
     ]
   },
   {
-    "id": "congelacion", "title": "Congelación", "color": "blue",
+    "id": "atragantamiento",
+    "title": "Atragantamiento",
+    "color": "teal",
     "subtypes": [
-      { "name": "Congelación superficial", "sintomas": "Piel pálida, entumecimiento, sensación de hormigueo.", "tratamiento": "Calentar gradualmente la zona. No frotar. Sumergir en agua tibia (37-39°C)." },
-      { "name": "Congelación profunda", "sintomas": "Piel dura y cerosa, pérdida total de sensibilidad.", "tratamiento": "Buscar atención médica urgente. No calentar si hay riesgo de recongelación." }
+      {
+        "name": "Obstrucción parcial",
+        "sintomas": "Tos, dificultad para hablar, respiración con silbidos.",
+        "tratamiento": "Animar a toser. No dar palmadas si puede toser. Vigilar evolución."
+      },
+      {
+        "name": "Obstrucción total",
+        "sintomas": "No puede hablar, toser ni respirar. Se lleva las manos al cuello.",
+        "tratamiento": "Maniobra de Heimlich: 5 compresiones abdominales. Si pierde conciencia, iniciar RCP."
+      }
     ]
   },
   {
-    "id": "contusiones", "title": "Contusiones", "color": "pink",
+    "id": "congelacion",
+    "title": "Congelación",
+    "color": "blue",
     "subtypes": [
-      { "name": "Contusión leve", "sintomas": "Dolor, hematoma, inflamación leve.", "tratamiento": "Aplicar hielo 15-20 minutos. Reposo. Elevar la zona afectada." },
-      { "name": "Contusión grave", "sintomas": "Hematoma extenso, dolor severo, limitación funcional.", "tratamiento": "Aplicar frío. No masajear. Consultar médico si no mejora en 48 horas." }
+      {
+        "name": "Congelación superficial",
+        "sintomas": "Piel pálida, entumecimiento, sensación de hormigueo.",
+        "tratamiento": "Calentar gradualmente la zona. No frotar. Sumergir en agua tibia (37-39°C)."
+      },
+      {
+        "name": "Congelación profunda",
+        "sintomas": "Piel dura y cerosa, pérdida total de sensibilidad.",
+        "tratamiento": "Buscar atención médica urgente. No calentar si hay riesgo de recongelación."
+      }
     ]
   },
   {
-    "id": "convulsiones", "title": "Convulsiones", "color": "purple",
+    "id": "contusiones",
+    "title": "Contusiones",
+    "color": "pink",
     "subtypes": [
-      { "name": "Convulsión tónico-clónica", "sintomas": "Pérdida brusca de conciencia, rigidez muscular seguida de sacudidas rítmicas. Puede haber apnea, cianosis, mordedura de lengua.", "tratamiento": "Proteger la cabeza. Retirar objetos peligrosos. NO sujetar ni introducir nada en la boca. Al cesar, posición lateral de seguridad. Llamar al 112 si dura más de 5 minutos." },
-      { "name": "Convulsión febril (niños)", "sintomas": "Sacudidas generalizadas en niños de 6 meses a 5 años con fiebre alta. Generalmente breve.", "tratamiento": "Colocar en el suelo, proteger la cabeza. NO sujetar, NO introducir nada en la boca. Desabrigar. Al terminar, posición lateral de seguridad. Acudir al médico siempre." }
+      {
+        "name": "Contusión leve",
+        "sintomas": "Dolor, hematoma, inflamación leve.",
+        "tratamiento": "Aplicar hielo 15-20 minutos. Reposo. Elevar la zona afectada."
+      },
+      {
+        "name": "Contusión grave",
+        "sintomas": "Hematoma extenso, dolor severo, limitación funcional.",
+        "tratamiento": "Aplicar frío. No masajear. Consultar médico si no mejora en 48 horas."
+      }
     ]
   },
   {
-    "id": "cortes", "title": "Cortes", "color": "purple",
+    "id": "convulsiones",
+    "title": "Convulsiones",
+    "color": "purple",
     "subtypes": [
-      { "name": "Cortes superficiales", "sintomas": "Sangrado leve, dolor localizado.", "tratamiento": "Lavar con agua y jabón. Presionar con gasa estéril. Aplicar antiséptico y cubrir." },
-      { "name": "Cortes profundos", "sintomas": "Sangrado abundante, bordes separados.", "tratamiento": "Presionar firmemente con tela limpia. Elevar la extremidad. Acudir a urgencias." }
+      {
+        "name": "Convulsión tónico-clónica",
+        "sintomas": "Pérdida brusca de conciencia, rigidez muscular seguida de sacudidas rítmicas. Puede haber apnea, cianosis, mordedura de lengua.",
+        "tratamiento": "Proteger la cabeza. Retirar objetos peligrosos. NO sujetar ni introducir nada en la boca. Al cesar, posición lateral de seguridad. Llamar al 112 si dura más de 5 minutos."
+      },
+      {
+        "name": "Convulsión febril (niños)",
+        "sintomas": "Sacudidas generalizadas en niños de 6 meses a 5 años con fiebre alta. Generalmente breve.",
+        "tratamiento": "Colocar en el suelo, proteger la cabeza. NO sujetar, NO introducir nada en la boca. Desabrigar. Al terminar, posición lateral de seguridad. Acudir al médico siempre."
+      }
     ]
   },
   {
-    "id": "crisis_asmatica", "title": "Crisis Asmática", "color": "teal",
+    "id": "cortes",
+    "title": "Cortes",
+    "color": "purple",
     "subtypes": [
-      { "name": "Crisis asmática leve", "sintomas": "Dificultad respiratoria moderada, sibilancias, tos seca, opresión en el pecho. Puede hablar con normalidad.", "tratamiento": "Sentar erguido. Administrar inhalador broncodilatador 2-4 pulsaciones. Tranquilizar. Si no mejora en 15 minutos, llamar al 112." },
-      { "name": "Crisis asmática grave", "sintomas": "Disnea intensa que impide hablar, cianosis, agotamiento, frecuencia respiratoria muy elevada.", "tratamiento": "Llamar al 112 inmediatamente. Administrar inhalador. Mantener incorporado. No dejar solo. Preparar RCP si pierde conciencia." }
+      {
+        "name": "Cortes superficiales",
+        "sintomas": "Sangrado leve, dolor localizado.",
+        "tratamiento": "Lavar con agua y jabón. Presionar con gasa estéril. Aplicar antiséptico y cubrir."
+      },
+      {
+        "name": "Cortes profundos",
+        "sintomas": "Sangrado abundante, bordes separados.",
+        "tratamiento": "Presionar firmemente con tela limpia. Elevar la extremidad. Acudir a urgencias."
+      }
     ]
   },
   {
-    "id": "desmayo", "title": "Desmayo / Síncope", "color": "indigo",
+    "id": "crisis_asmatica",
+    "title": "Crisis Asmática",
+    "color": "teal",
     "subtypes": [
-      { "name": "Desmayo simple", "sintomas": "Pérdida súbita de conciencia, palidez, sudoración fría, pulso débil.", "tratamiento": "Tumbar boca arriba y elevar las piernas 30 cm. Aflojar ropa ajustada. Vigilar respiración. Si no recupera conciencia en 1-2 minutos, llamar al 112." },
-      { "name": "Desmayo por calor", "sintomas": "Mareo, visión borrosa, náuseas, pérdida de conciencia en ambiente caluroso.", "tratamiento": "Llevar a lugar fresco. Hidratar si está consciente. Aplicar paños húmedos en frente y cuello. Si no mejora, llamar al 112." }
+      {
+        "name": "Crisis asmática leve",
+        "sintomas": "Dificultad respiratoria moderada, sibilancias, tos seca, opresión en el pecho. Puede hablar con normalidad.",
+        "tratamiento": "Sentar erguido. Administrar inhalador broncodilatador 2-4 pulsaciones. Tranquilizar. Si no mejora en 15 minutos, llamar al 112."
+      },
+      {
+        "name": "Crisis asmática grave",
+        "sintomas": "Disnea intensa que impide hablar, cianosis, agotamiento, frecuencia respiratoria muy elevada.",
+        "tratamiento": "Llamar al 112 inmediatamente. Administrar inhalador. Mantener incorporado. No dejar solo. Preparar RCP si pierde conciencia."
+      }
     ]
   },
   {
-    "id": "esguince", "title": "Esguince", "color": "orange",
+    "id": "desmayo",
+    "title": "Desmayo / Síncope",
+    "color": "indigo",
     "subtypes": [
-      { "name": "Esguince leve", "sintomas": "Dolor moderado, inflamación leve, dificultad para apoyar el pie, sin deformidad.", "tratamiento": "Protocolo RICE: Reposo, Hielo 20 min cada 2h, Compresión con vendaje elástico, Elevación del miembro. No apoyar las primeras 24-48h." },
-      { "name": "Esguince grave", "sintomas": "Dolor intenso, inflamación marcada, imposibilidad de apoyar el pie, posible chasquido.", "tratamiento": "Inmovilizar con férula o vendaje. Aplicar hielo. Elevar el miembro. Acudir a urgencias para descartar fractura." }
+      {
+        "name": "Desmayo simple",
+        "sintomas": "Pérdida súbita de conciencia, palidez, sudoración fría, pulso débil.",
+        "tratamiento": "Tumbar boca arriba y elevar las piernas 30 cm. Aflojar ropa ajustada. Vigilar respiración. Si no recupera conciencia en 1-2 minutos, llamar al 112."
+      },
+      {
+        "name": "Desmayo por calor",
+        "sintomas": "Mareo, visión borrosa, náuseas, pérdida de conciencia en ambiente caluroso.",
+        "tratamiento": "Llevar a lugar fresco. Hidratar si está consciente. Aplicar paños húmedos en frente y cuello. Si no mejora, llamar al 112."
+      }
     ]
   },
   {
-    "id": "hemorragia_nasal", "title": "Hemorragia Nasal", "color": "red",
+    "id": "esguince",
+    "title": "Esguince",
+    "color": "orange",
     "subtypes": [
-      { "name": "Epistaxis leve", "sintomas": "Sangrado nasal sin traumatismo previo, de corta duración.", "tratamiento": "Inclinar la cabeza hacia delante. Presionar la aleta nasal 10-15 minutos. Respirar por la boca. No sonarse. Si no cede en 20 minutos, acudir al médico." },
-      { "name": "Epistaxis tras golpe", "sintomas": "Sangrado abundante tras traumatismo, posible deformidad, dolor intenso.", "tratamiento": "Aplicar presión con gasa limpia. No recolocar el tabique. Aplicar frío. Acudir a urgencias para descartar fractura nasal." }
+      {
+        "name": "Esguince leve",
+        "sintomas": "Dolor moderado, inflamación leve, dificultad para apoyar el pie, sin deformidad.",
+        "tratamiento": "Protocolo RICE: Reposo, Hielo 20 min cada 2h, Compresión con vendaje elástico, Elevación del miembro. No apoyar las primeras 24-48h."
+      },
+      {
+        "name": "Esguince grave",
+        "sintomas": "Dolor intenso, inflamación marcada, imposibilidad de apoyar el pie, posible chasquido.",
+        "tratamiento": "Inmovilizar con férula o vendaje. Aplicar hielo. Elevar el miembro. Acudir a urgencias para descartar fractura."
+      }
     ]
   },
   {
-    "id": "insolacion", "title": "Insolación / Golpe de Calor", "color": "amber",
+    "id": "hemorragia_nasal",
+    "title": "Hemorragia Nasal",
+    "color": "red",
     "subtypes": [
-      { "name": "Insolación leve", "sintomas": "Piel enrojecida y caliente, dolor de cabeza, mareo, náuseas, temperatura 38-39°C.", "tratamiento": "Llevar a lugar fresco. Quitar ropa de más. Paños húmedos fríos en cuello, axilas e ingles. Hidratar a pequeños sorbos. Reposo." },
-      { "name": "Golpe de calor grave", "sintomas": "Temperatura superior a 40°C, piel seca y caliente, confusión, agitación, pérdida de conciencia. Emergencia médica.", "tratamiento": "Llamar al 112 urgentemente. Enfriar con agua fría o hielo en cuello, axilas e ingles. Abanicar. No dar líquidos si inconsciente. Vigilar respiración." }
+      {
+        "name": "Epistaxis leve",
+        "sintomas": "Sangrado nasal sin traumatismo previo, de corta duración.",
+        "tratamiento": "Inclinar la cabeza hacia delante. Presionar la aleta nasal 10-15 minutos. Respirar por la boca. No sonarse. Si no cede en 20 minutos, acudir al médico."
+      },
+      {
+        "name": "Epistaxis tras golpe",
+        "sintomas": "Sangrado abundante tras traumatismo, posible deformidad, dolor intenso.",
+        "tratamiento": "Aplicar presión con gasa limpia. No recolocar el tabique. Aplicar frío. Acudir a urgencias para descartar fractura nasal."
+      }
     ]
   },
   {
-    "id": "picaduras", "title": "Picaduras", "color": "green",
+    "id": "insolacion",
+    "title": "Insolación / Golpe de Calor",
+    "color": "amber",
     "subtypes": [
-      { "name": "Picaduras de insectos", "sintomas": "Hinchazón local, enrojecimiento, picazón.", "tratamiento": "Lavar con agua y jabón. Aplicar hielo. Usar antihistamínico si hay reacción alérgica." },
-      { "name": "Picaduras de medusa", "sintomas": "Dolor intenso, marcas lineales, enrojecimiento.", "tratamiento": "Lavar con agua salada (nunca dulce). Aplicar vinagre. No rascar." }
+      {
+        "name": "Insolación leve",
+        "sintomas": "Piel enrojecida y caliente, dolor de cabeza, mareo, náuseas, temperatura 38-39°C.",
+        "tratamiento": "Llevar a lugar fresco. Quitar ropa de más. Paños húmedos fríos en cuello, axilas e ingles. Hidratar a pequeños sorbos. Reposo."
+      },
+      {
+        "name": "Golpe de calor grave",
+        "sintomas": "Temperatura superior a 40°C, piel seca y caliente, confusión, agitación, pérdida de conciencia. Emergencia médica.",
+        "tratamiento": "Llamar al 112 urgentemente. Enfriar con agua fría o hielo en cuello, axilas e ingles. Abanicar. No dar líquidos si inconsciente. Vigilar respiración."
+      }
     ]
   },
   {
-    "id": "quemaduras", "title": "Quemaduras", "color": "red",
+    "id": "picaduras",
+    "title": "Picaduras",
+    "color": "green",
     "subtypes": [
-      { "name": "Quemaduras de primer grado", "sintomas": "Enrojecimiento de la piel, dolor leve, hinchazón menor.", "tratamiento": "Aplicar agua fría durante 10-15 minutos. No aplicar hielo. Cubrir con gasa estéril." },
-      { "name": "Quemaduras de segundo grado", "sintomas": "Ampollas, enrojecimiento intenso, dolor severo, hinchazón.", "tratamiento": "Enfriar con agua. No reventar ampollas. Cubrir con apósito estéril. Acudir al médico." },
-      { "name": "Quemaduras de tercer grado", "sintomas": "Piel blanquecina o carbonizada, puede no haber dolor por daño nervioso.", "tratamiento": "Llamar a emergencias inmediatamente. No quitar ropa adherida. Cubrir con tela limpia." }
+      {
+        "name": "Picaduras de insectos",
+        "sintomas": "Hinchazón local, enrojecimiento, picazón.",
+        "tratamiento": "Lavar con agua y jabón. Aplicar hielo. Usar antihistamínico si hay reacción alérgica."
+      },
+      {
+        "name": "Picaduras de medusa",
+        "sintomas": "Dolor intenso, marcas lineales, enrojecimiento.",
+        "tratamiento": "Lavar con agua salada (nunca dulce). Aplicar vinagre. No rascar."
+      }
     ]
   },
   {
-    "id": "roturas", "title": "Roturas", "color": "orange",
+    "id": "quemaduras",
+    "title": "Quemaduras",
+    "color": "red",
     "subtypes": [
-      { "name": "Fractura cerrada", "sintomas": "Dolor intenso, inflamación, deformidad, imposibilidad de movimiento.", "tratamiento": "Inmovilizar la zona. Aplicar hielo. No intentar colocar el hueso. Acudir a urgencias." },
-      { "name": "Fractura abierta", "sintomas": "Hueso visible, sangrado, dolor extremo.", "tratamiento": "Llamar a emergencias. Cubrir la herida sin presionar. No mover al afectado." }
+      {
+        "name": "Quemaduras de primer grado",
+        "sintomas": "Enrojecimiento de la piel, dolor leve, hinchazón menor.",
+        "tratamiento": "Aplicar agua fría durante 10-15 minutos. No aplicar hielo. Cubrir con gasa estéril."
+      },
+      {
+        "name": "Quemaduras de segundo grado",
+        "sintomas": "Ampollas, enrojecimiento intenso, dolor severo, hinchazón.",
+        "tratamiento": "Enfriar con agua. No reventar ampollas. Cubrir con apósito estéril. Acudir al médico."
+      },
+      {
+        "name": "Quemaduras de tercer grado",
+        "sintomas": "Piel blanquecina o carbonizada, puede no haber dolor por daño nervioso.",
+        "tratamiento": "Llamar a emergencias inmediatamente. No quitar ropa adherida. Cubrir con tela limpia."
+      }
+    ]
+  },
+  {
+    "id": "roturas",
+    "title": "Roturas",
+    "color": "orange",
+    "subtypes": [
+      {
+        "name": "Fractura cerrada",
+        "sintomas": "Dolor intenso, inflamación, deformidad, imposibilidad de movimiento.",
+        "tratamiento": "Inmovilizar la zona. Aplicar hielo. No intentar colocar el hueso. Acudir a urgencias."
+      },
+      {
+        "name": "Fractura abierta",
+        "sintomas": "Hueso visible, sangrado, dolor extremo.",
+        "tratamiento": "Llamar a emergencias. Cubrir la herida sin presionar. No mover al afectado."
+      }
     ]
   }
 ]
