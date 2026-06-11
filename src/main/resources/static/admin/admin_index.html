@@ -16,6 +16,7 @@
     .category-card { border-left: 4px solid #1565C0; margin-bottom: 16px; }
     .subtype-row { background: #f8f9fa; border-radius: 8px; padding: 12px; margin-bottom: 8px; }
     .tip-card { margin-bottom: 12px; }
+    .disease-card { border-left: 4px solid #6f42c1; margin-bottom: 12px; }
     .badge-active { background: #198754; }
     .badge-disabled { background: #dc3545; }
     .btn-icon { width: 32px; height: 32px; padding: 0; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; }
@@ -27,6 +28,8 @@
     .img-preview-placeholder { width: 80px; height: 80px; border-radius: 8px; border: 2px dashed #dee2e6; background: #f8f9fa; display: flex; align-items: center; justify-content: center; color: #adb5bd; font-size: 11px; text-align: center; cursor: pointer; }
     .img-upload-area { display: flex; align-items: center; gap: 10px; }
     .uploading-badge { font-size: 11px; color: #0d6efd; }
+    .disease-index { display: inline-block; width: 28px; height: 28px; border-radius: 50%; background: #6f42c1; color: #fff; font-size: 12px; font-weight: bold; text-align: center; line-height: 28px; margin-right: 8px; flex-shrink: 0; }
+    .disease-search { max-width: 320px; }
   </style>
 </head>
 <body>
@@ -56,6 +59,7 @@
       <a class="nav-link active" onclick="showTab('usuarios')">👥 Usuarios</a>
       <a class="nav-link" onclick="showTab('firstaid')">🩺 Primeros Auxilios</a>
       <a class="nav-link" onclick="showTab('tips')">💡 Consejos</a>
+      <a class="nav-link" onclick="showTab('diseases')">🦠 Enfermedades</a>
       <a class="nav-link" onclick="showTab('settings')">⚙️ Configuración</a>
       <button class="btn btn-sm btn-outline-light" onclick="signOut()">Salir</button>
     </div>
@@ -109,6 +113,21 @@
       <div id="tipsEditor"></div>
     </div>
 
+    <!-- TAB ENFERMEDADES -->
+    <div id="tabDiseases" class="tab-content" style="display:none">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="mb-0">Enfermedades <span id="diseasesCount" class="badge bg-secondary ms-2" style="font-size:13px"></span></h4>
+        <div class="d-flex gap-2 align-items-center">
+          <input type="text" id="diseaseSearchInput" class="form-control form-control-sm disease-search"
+            placeholder="🔍 Buscar enfermedad..." oninput="filterDiseases()">
+          <button class="btn btn-outline-secondary btn-sm" onclick="loadDiseases()">🔄 Recargar</button>
+          <button class="btn btn-success btn-sm" onclick="saveDiseases()">💾 Guardar y publicar</button>
+          <button class="btn btn-primary btn-sm" onclick="addDisease()">+ Nueva enfermedad</button>
+        </div>
+      </div>
+      <div id="diseasesEditor"></div>
+    </div>
+
     <!-- TAB CONFIGURACION -->
     <div id="tabSettings" class="tab-content" style="display:none">
       <h4 class="mb-3">Configuración</h4>
@@ -158,6 +177,8 @@ const IMAGES_URL   = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB
 // ── Estado global ────────────────────────────────────────
 let firstAidData = [], firstAidSha = "";
 let tipsData = [], tipsSha = "";
+let diseasesData = [], diseasesSha = "";
+let diseasesFilter = "";
 
 // ── Firebase Auth ────────────────────────────────────────
 firebase.initializeApp(firebaseConfig);
@@ -168,7 +189,7 @@ auth.onAuthStateChanged(user => {
   if (user && user.email === ADMIN_EMAIL) {
     document.getElementById("loginScreen").style.display = "none";
     document.getElementById("dashboard").style.display = "block";
-    loadUsers(); loadFirstAid(); loadTips(); loadSettings();
+    loadUsers(); loadFirstAid(); loadTips(); loadDiseases(); loadSettings();
   } else {
     if (user) { auth.signOut(); showLoginError("Solo el administrador puede acceder."); }
     document.getElementById("loginScreen").style.display = "flex";
@@ -190,10 +211,16 @@ function showLoginError(msg) {
 
 // ── Navegación ───────────────────────────────────────────
 function showTab(tab) {
-  ["tabUsuarios","tabFirstAid","tabTips","tabSettings"].forEach(t =>
+  ["tabUsuarios","tabFirstAid","tabTips","tabDiseases","tabSettings"].forEach(t =>
     document.getElementById(t).style.display = "none");
   document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
-  const map = {usuarios:"tabUsuarios",firstaid:"tabFirstAid",tips:"tabTips",settings:"tabSettings"};
+  const map = {
+    usuarios: "tabUsuarios",
+    firstaid: "tabFirstAid",
+    tips:     "tabTips",
+    diseases: "tabDiseases",
+    settings: "tabSettings"
+  };
   document.getElementById(map[tab]).style.display = "block";
   event.target.classList.add("active");
 }
@@ -248,7 +275,6 @@ async function uploadImageToGitHub(file, folder) {
   const safeName = `${Date.now()}_${file.name.replace(/[^a-zA-Z0-9._-]/g, "_")}`;
   const path = `${IMAGES_PATH}/${folder}/${safeName}`;
 
-  // Convertir a base64
   const base64 = await new Promise((res, rej) => {
     const reader = new FileReader();
     reader.onload = () => res(reader.result.split(",")[1]);
@@ -256,7 +282,6 @@ async function uploadImageToGitHub(file, folder) {
     reader.readAsDataURL(file);
   });
 
-  // Verificar si ya existe (para obtener sha si hace falta)
   let existingSha = "";
   try {
     const check = await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`,
@@ -589,6 +614,154 @@ async function saveTips() {
     await incrementVersion();
     const { sha } = await githubGet("src/main/resources/tips.json");
     tipsSha = sha;
+  } catch(e) { showToast(e.message, "danger"); }
+}
+
+// ── ENFERMEDADES ──────────────────────────────────────────
+
+async function loadDiseases() {
+  document.getElementById("diseasesEditor").innerHTML = '<p class="text-muted">Cargando...</p>';
+  document.getElementById("diseasesCount").textContent = "";
+  try {
+    const { content, sha } = await githubGet("src/main/resources/diseases.json");
+    diseasesData = content; diseasesSha = sha;
+    diseasesFilter = "";
+    document.getElementById("diseaseSearchInput").value = "";
+    renderDiseases();
+  } catch(e) {
+    document.getElementById("diseasesEditor").innerHTML = `<div class="alert alert-danger">${e.message}</div>`;
+  }
+}
+
+function filterDiseases() {
+  diseasesFilter = document.getElementById("diseaseSearchInput").value.toLowerCase().trim();
+  renderDiseases();
+}
+
+// Escapa caracteres especiales HTML para evitar XSS al insertar valores en atributos
+function esc(str) {
+  return (str || "").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+
+function renderDiseases() {
+  const el = document.getElementById("diseasesEditor");
+  const countBadge = document.getElementById("diseasesCount");
+
+  // Filtrado por nombre o alias
+  const filtered = diseasesFilter
+    ? diseasesData.filter((d, _) => {
+        const name = (d.name || "").toLowerCase();
+        const aliases = (d.aliases || []).join(" ").toLowerCase();
+        return name.includes(diseasesFilter) || aliases.includes(diseasesFilter);
+      })
+    : diseasesData;
+
+  countBadge.textContent = diseasesFilter
+    ? `${filtered.length} / ${diseasesData.length}`
+    : `${diseasesData.length} enfermedades`;
+
+  if (!filtered.length) {
+    el.innerHTML = '<p class="text-muted mt-3">No se encontraron enfermedades.</p>';
+    return;
+  }
+
+  // Renderizamos usando los índices REALES en diseasesData (no los filtrados)
+  el.innerHTML = filtered.map(disease => {
+    const ri = diseasesData.indexOf(disease); // índice real
+    const aliases = (disease.aliases || []).join(", ");
+    return `
+    <div class="card disease-card p-3 mb-2">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="d-flex align-items-center">
+          <span class="disease-index">${ri + 1}</span>
+          <strong class="fs-6">${esc(disease.name) || "<em class='text-muted'>Sin nombre</em>"}</strong>
+        </div>
+        <button class="btn btn-sm btn-outline-danger" onclick="removeDisease(${ri})">✕ Eliminar</button>
+      </div>
+
+      <div class="row g-2 mb-2">
+        <div class="col-md-6">
+          <label class="form-label small text-muted fw-bold">Nombre</label>
+          <input class="form-control form-control-sm" value="${esc(disease.name)}"
+            oninput="diseasesData[${ri}].name=this.value;updateDiseaseHeader(${ri},this.value)">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label small text-muted fw-bold">
+            Alias
+            <span class="text-muted fw-normal">(separados por coma)</span>
+          </label>
+          <input class="form-control form-control-sm" value="${esc(aliases)}"
+            placeholder="ej: diabetes tipo 2, azúcar"
+            oninput="diseasesData[${ri}].aliases=this.value.split(',').map(s=>s.trim()).filter(s=>s)">
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <label class="form-label small text-muted fw-bold">Descripción</label>
+        <textarea class="form-control form-control-sm" rows="3"
+          oninput="diseasesData[${ri}].description=this.value">${esc(disease.description)}</textarea>
+      </div>
+
+      <div class="mb-2">
+        <label class="form-label small text-muted fw-bold">Síntomas</label>
+        <textarea class="form-control form-control-sm" rows="3"
+          oninput="diseasesData[${ri}].symptoms=this.value">${esc(disease.symptoms)}</textarea>
+      </div>
+
+      <div class="mb-0">
+        <label class="form-label small text-muted fw-bold">Tratamiento</label>
+        <textarea class="form-control form-control-sm" rows="3"
+          oninput="diseasesData[${ri}].treatment=this.value">${esc(disease.treatment)}</textarea>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+// Actualiza el encabezado del card en tiempo real al cambiar el nombre
+function updateDiseaseHeader(ri, newName) {
+  // El strong dentro del card correspondiente
+  const cards = document.querySelectorAll(".disease-card");
+  // Buscamos el card cuyo índice coincida (el span.disease-index muestra ri+1)
+  for (const card of cards) {
+    const idx = card.querySelector(".disease-index");
+    if (idx && parseInt(idx.textContent) === ri + 1) {
+      const strong = idx.nextElementSibling;
+      if (strong) strong.textContent = newName || "";
+      break;
+    }
+  }
+}
+
+function addDisease() {
+  const newDisease = { name: "Nueva enfermedad", aliases: [], description: "", symptoms: "", treatment: "" };
+  diseasesData.unshift(newDisease);
+  diseasesFilter = "";
+  document.getElementById("diseaseSearchInput").value = "";
+  renderDiseases();
+  // Scroll al principio para ver la nueva enfermedad
+  document.getElementById("diseasesEditor").scrollIntoView({ behavior: "smooth" });
+}
+
+function removeDisease(ri) {
+  const name = diseasesData[ri].name || "esta enfermedad";
+  if (!confirm(`¿Eliminar "${name}"?`)) return;
+  diseasesData.splice(ri, 1);
+  renderDiseases();
+}
+
+async function saveDiseases() {
+  try {
+    showToast("Guardando enfermedades...", "info");
+    await githubPut(
+      "src/main/resources/diseases.json",
+      diseasesData,
+      diseasesSha,
+      "Dashboard: actualizar enfermedades"
+    );
+    // Refresca el SHA para permitir guardados sucesivos sin recargar
+    const { sha } = await githubGet("src/main/resources/diseases.json");
+    diseasesSha = sha;
+    showToast(`✓ Enfermedades guardadas (${diseasesData.length} entradas). Render redesplegará en ~2 minutos.`);
   } catch(e) { showToast(e.message, "danger"); }
 }
 
