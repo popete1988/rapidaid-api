@@ -1,5 +1,12 @@
 [
   {
+    "name": "Insuficiencia renal",
+    "aliases": [],
+    "description": "Prueba",
+    "symptoms": "Prueba2",
+    "treatment": "Prueba3"
+  },
+  {
     "name": "Meningitis",
     "aliases": [
       "meningitis bacteriana",
